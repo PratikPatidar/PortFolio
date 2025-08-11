@@ -1,96 +1,190 @@
-import React from 'react'
-
-import '../../src/index.css'
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { FaArrowDown } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import "../../src/index.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
 
-import About from './About';
-import { GridBeam } from './ui/GridBeam';
-import bgImg from './images/background.jpg'
-import ViewResume from './ui/ViewResume';
-import Navbar from './Navbar';
 const HeroSection = () => {
+  const role = "Full Stack Developer";
+  const [text, setText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-          return (
+  // Continuous typing + deleting animation
+  useEffect(() => {
+    const typingSpeed = isDeleting ? 60 : 100; // delete faster than type
 
-                    <div className='h-screen relative  bg-[#0e0e0e] overflow-hidden flex flex-col items-center justify-center px-4' id='home'>
+    if (!isDeleting && charIndex < role.length) {
+      const timeout = setTimeout(() => {
+        setText(role.substring(0, charIndex + 1));
+        setCharIndex((prev) => prev + 1);
+      }, typingSpeed);
+      return () => clearTimeout(timeout);
+    }
 
+    if (isDeleting && charIndex > 0) {
+      const timeout = setTimeout(() => {
+        setText(role.substring(0, charIndex - 1));
+        setCharIndex((prev) => prev - 1);
+      }, typingSpeed);
+      return () => clearTimeout(timeout);
+    }
 
-                              <>
+    if (charIndex === role.length) {
+      // wait before deleting
+      const timeout = setTimeout(() => setIsDeleting(true), 1500);
+      return () => clearTimeout(timeout);
+    }
 
-                                        {/* <BackgroundAnimation/> */}
+    if (charIndex === 0 && isDeleting) {
+      // restart typing
+      setIsDeleting(false);
+    }
+  }, [charIndex, isDeleting, role]);
 
-                                        <img src="https://cdn.prod.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2.png"
-                                                  loading="lazy" data-w-id="fc79296f-2f5d-7f21-b39b-3b6f379cd81c" sizes="100vw" alt=""
-                                                  srcSet="https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2-p-500.png 500w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2-p-800.png 800w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2-p-1080.png 1080w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2-p-1600.png 1600w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2-p-2000.png 2000w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2-p-2600.png 2600w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2-p-3200.png 3200w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647ab90142d2b2d30662abab_Landing%20color%20cloud%201.2.png 3828w"
-                                                  className=" landing-cloud-1 absolute  bottom-0" />
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 pt-16 sm:pt-20 lg:pt-28 bg-black font-[Poppins]"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 z-0 spotlight-bg"></div>
 
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center">
+        {/* Name */}
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+        >
+          Pratik Patidar
+        </motion.h1>
 
-                                        <img src="https://cdn.prod.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2.png"
-                                                  loading="lazy" data-w-id="fc79296f-2f5d-7f21-b39b-3b6f379cd81c" sizes="100vw" alt=""
-                                                  srcSet="https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2-p-500.png 500w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2-p-800.png 800w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2-p-1080.png 1080w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2-p-1600.png 1600w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2-p-2000.png 2000w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2-p-2600.png 2600w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2-p-3200.png 3200w, https://assets-global.website-files.com/605d01759b2d0182669e8304/647abcc4bb3d6fefb9da6929_Landing%20color%20cloud2.png 3705w"
-                                                  className="landing-cloud-2 absolute" />
+        {/* Typing Animation for Role */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.05 },
+            },
+          }}
+          className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white mb-4 h-10 flex relative tracking-wide"
+        >
+          {text.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              style={{ whiteSpace: "pre" }}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              className="relative"
+            >
+              {char}
+            </motion.span>
+          ))}
 
+          {/* Underline gradient only when text is fully typed */}
+          {!isDeleting && charIndex === role.length && (
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="absolute bottom-0 left-0 h-[3px] bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-full"
+            ></motion.div>
+          )}
+        </motion.div>
 
-                                        <div
-                                                  className=" flex flex-row mx-auto z-10 hover:scale-110 top-100 transition-transform duration-300"
-                                        >
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.6, duration: 0.8 }}
+          className="text-gray-400 text-center max-w-xl mb-8"
+        >
+          Crafting responsive and engaging digital experiences with a passion
+          for clean code and modern design.
+        </motion.p>
 
-                                                  <GridBeam className="flex items-center justify-center flex-col max-w-lg h-12 gap-12">
+        {/* Social Icons */}
+        <div className="flex justify-center items-center gap-6 mb-6">
+          {[
+            { icon: <FaGithub />, link: "https://github.com/PratikPatidar" },
+            {
+              icon: <FaLinkedinIn />,
+              link: "https://in.linkedin.com/in/pratik-patidar",
+            },
+            {
+              icon: <MdEmail />,
+              link: "mailto:pratikpatidar7990@gmail.com",
+            },
+          ].map((item, index) => (
+            <motion.a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                delay: 2 + index * 0.2,
+                duration: 0.5,
+                type: "spring",
+                stiffness: 150,
+              }}
+              whileHover={{
+                scale: 1.2,
+                rotate: 5,
+                transition: { type: "spring", stiffness: 200 },
+              }}
+              whileTap={{ scale: 0.9 }}
+              className="text-2xl text-gray-300 hover:text-white transition-colors"
+            >
+              {item.icon}
+            </motion.a>
+          ))}
+        </div>
 
+        {/* Let's Connect Button */}
+        <motion.a
+          href="#contact"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 2.4, duration: 0.6, ease: "easeOut" },
+          }}
+          whileHover={{
+            scale: 1.08,
+            backgroundColor: "#f3f4f6",
+            color: "#111",
+            boxShadow: "0px 8px 20px rgba(255, 255, 255, 0.3)",
+          }}
+          whileTap={{ scale: 0.95 }}
+          className="px-6 py-3 rounded-full bg-white text-black font-medium shadow-lg transition-colors duration-300"
+          style={{ animation: "pulse 2s infinite" }}
+        >
+          Let’s Connect
+        </motion.a>
+      </div>
 
-                                                            <div>
-                                                                      <h1 className="font-extrabold mb-4  text-4xl sm:text-5xl lg:text-6xl font-bold mb-2   text-center font-recoleta "> Pratik  Patidar </h1>
-                                                                      <h1 className="text-xl lg:text-2xl text-neutral-400 mb-4  z-10 font-medium text-center  mx-auto w-full max-w-screen-md text-center font-sans text-[40pt] font-bold leading-none z-10 h-8 lg:text-6rem]">Full Stack Developer</h1>
+      {/* Pulse animation style */}
+      <style>{`
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.04); }
+        }
+      `}</style>
+    </section>
+  );
+};
 
-                                                                      <div className="flex justify-center items-center gap-6 relative z-10">
-                                                                                <a
-                                                                                          href="https://in.linkedin.com/in/pratik-patidar"
-                                                                                          target="_blank"
-                                                                                          rel="noopener noreferrer"
-                                                                                >
-                                                                                          <FaGithub className="text-2xl hover:scale-110" />
-                                                                                </a>
-                                                                                <a
-                                                                                          href="https://github.com/PratikPatidar"
-                                                                                          target="_blank"
-                                                                                          rel="noopener noreferrer"
-                                                                                >
-                                                                                          <FaLinkedinIn className="text-2xl hover:scale-110" />
-                                                                                </a>
-                                                                                <a
-                                                                                          href="mailto:pratikpatidar7990@gmail.com"
-                                                                                          target="_blank"
-                                                                                          rel="noopener noreferrer"
-                                                                                >
-                                                                                          <MdEmail className="text-2xl hover:scale-110" />
-                                                                                </a>
-                                                                      </div>
-
-                                                            </div>
-                                                  </GridBeam>
-
-
-
-                                        </div>
-                                        <span className='m-4'></span>
-
-                                        <div className='justify-center text-center m-16  top-100 z-40'>
-                                                  <a href="https://drive.google.com/file/d/1s6srcxVyTYu4g_pnkzWRdbPXeElrY_q2/view?usp=drivesdk" target='_blank'>
-                                                  <button className="font-extrabold mb-4rounded-lg cursor-pointer border-2 p-2  sm:text-xl lg:text-2xl font-bold mb-2   text-center font-recoleta "
-
-
-                                                  >
-                                                            Let's Connect
-                                                            </button>
-                                                  </a>
-                                        </div>
-
-                              </>
-                    </div >
-          )
-}
-
-export default HeroSection
+export default HeroSection;

@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.spotlight-bg {
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.08),
+    transparent 40%
+  );
+  animation: moveSpotlight 10s ease-in-out infinite;
+}
+
+@keyframes moveSpotlight {
+  0% {
+    --x: 20%;
+    --y: 30%;
+  }
+  25% {
+    --x: 80%;
+    --y: 40%;
+  }
+  50% {
+    --x: 60%;
+    --y: 70%;
+  }
+  75% {
+    --x: 30%;
+    --y: 60%;
+  }
+  100% {
+    --x: 20%;
+    --y: 30%;
+  }
+}
+
 .spinner {
     width: 56px;
     height: 56px;
