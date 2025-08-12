@@ -15,12 +15,23 @@ const linkVariants = {
   })
 };
 
+// Floating animation for icons
+const floatAnimation = {
+  animate: {
+    y: [0, -4, 0, 4, 0], // sine-like up and down
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
+};
+
 const Footer = () => {
   return (
-    <div className="footer-bg">
+    <div className="footer-bg  border-neutral-800">
       <GridPatternDashed>
         <div className="max-w-6xl mx-auto mt-12 xl:mt-20 mb-12 px-6 sm:px-16">
-          {/* Connect Section */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,8 +40,10 @@ const Footer = () => {
             className="mb-8"
           >
             <div className="flex items-center gap-2 mb-3 font-bold mt-10">
-              <FaLink className="size-5" />
-              <h2 className="text-xl xl:text-2xl">Connect with me</h2>
+              <FaLink className="size-5 text-purple-400" />
+              <h2 className="text-xl xl:text-2xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Connect with me
+              </h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
@@ -56,14 +69,14 @@ const Footer = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-lg text-neutral-400 font-medium hover:text-white hover:underline"
+                  className="flex items-center gap-2 text-lg text-neutral-400 font-medium hover:text-white transition-colors"
                   variants={linkVariants}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   custom={i}
                 >
-                  {link.icon}
+                  <motion.span {...floatAnimation}>{link.icon}</motion.span>
                   {link.label}
                 </motion.a>
               ))}
@@ -72,13 +85,13 @@ const Footer = () => {
 
           {/* Closing Message & Resume */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 text-neutral-300"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <div>
+            <div className="space-y-1">
               <p>Thanks for reaching the bottom of this page.</p>
               <p>If you like what you see,</p>
               <p>let's connect and build something together!</p>
@@ -86,15 +99,17 @@ const Footer = () => {
 
             <div>
               <p>Alternatively, here's a fancy sheet of paper.</p>
-              <a
+              <motion.a
                 href="https://drive.google.com/file/d/1s6srcxVyTYu4g_pnkzWRdbPXeElrY_q2/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 flex items-center underline hover:text-blue-400"
+                className="text-purple-400 flex items-center underline hover:text-pink-400 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
                 <span>Resume</span>
                 <FiDownload className="ml-1 mt-[2px]" />
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </div>

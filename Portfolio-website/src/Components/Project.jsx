@@ -67,20 +67,26 @@ const Projects = () => {
       className="max-w-6xl mx-auto mt-12 xl:mt-20 mb-12 px-6 sm:px-16"
       id="project"
     >
-      <h2 className="font-extrabold text-3xl xl:text-4xl font-recoleta text-center text-white mb-8">
-        Projects
-      </h2>
+    <h2 className="font-extrabold text-3xl xl:text-4xl font-recoleta text-center mb-8 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
+  Projects
+</h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-[#1a1a1a] border border-neutral-700 rounded-xl p-4 shadow-md hover:shadow-lg transition-all"
+            className="bg-[#1a1a1a] border border-neutral-800 rounded-xl overflow-hidden shadow-md transition-all duration-300 group"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{
+              scale: 1.02,
+              boxShadow: "0 0 20px rgba(168,85,247,0.5)",
+              transition: { duration: 0.4 }
+            }}
           >
-            <div className="overflow-hidden rounded-lg">
+            <div className="overflow-hidden">
               <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                 <motion.img
                   src={project.image}
