@@ -25,56 +25,51 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
 
 const projects = [
   {
-    title: "Mercanis B2B Supplier Marketplace",
-    description: "I played a core role in building an enterprise-grade platform handling over 500K+ daily interactions and ₹50+ crore in monthly GMV.\n\nI architected a real-time supplier dashboard using WebSockets (Socket.io) that pushed live updates to thousands of concurrent users. For the financial side, I integrated Razorpay checkout with a rock-solid 3-layer reconciliation system that bumped our payment accuracy to 99.95%.\n\nOn the performance front, I aggressively optimized the frontend—cutting the bundle size by 40% and reducing initial load times by 35% through dynamic imports and strategic code splitting.",
-    image: "/images/page.png", // Keeping placeholder image as specific image wasn't provided
-    liveLink: "#",
-    githubLink: "#",
-    tags: ["React", "Redux", "WebSockets", "Razorpay"],
-  },
-  {
-    title: "Recruitment Scheduling Dashboard",
-    description: "I built this scheduling grid from the ground up to handle massive lists of candidates without lagging. It uses virtualized lists and smart pagination to keep scrolling butter-smooth.\n\nTo keep things from breaking, I locked down our entire data pipeline with strict TypeScript interfaces—which honestly saved us from countless runtime errors.\n\nFor the UI, I managed the global state using Redux so that multi-step user actions felt seamless, ensuring the screen didn't flicker every time an API call fired.",
+    title: "Recruitment Scheduling Dashboard (ATS)",
+    description: "A comprehensive Minimum Viable Product (MVP) engineered from scratch to manage heavy recruitment workflows and candidate tracking.\n\nManaging thousands of candidate rows in the browser is expensive. I designed a highly optimized scheduling grid implementing advanced list rendering and pagination to ensure buttery-smooth scrolling.\n\nMulti-page candidate workflows require rock-solid memory. I wired the global state using Redux, paired with Next.js Server-Side Rendering (SSR) for instant initial loads. Strict TypeScript schemas were enforced to catch data malformations before they ever reached the DOM.",
     image: "/images/page.png",
     liveLink: "#",
     githubLink: "https://github.com/PratikPatidar",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Redux"],
+    tags: ["Next.js", "TypeScript", "Redux", "Tailwind CSS"],
   },
   {
     title: "E-Learning Platform",
-    description: "A full-stack MERN application I built to make online learning simpler. It lets users create courses, enroll, and track their progress effortlessly.\n\nI handled the JWT auth workflows and made sure the state management was rock solid under the hood.",
+    description: "A secure full-stack MERN application engineered to make online learning simpler. Users can create courses, enroll, and track their progress effortlessly.\n\nI handled the JWT auth workflows and designed atomic state updates to ensure the application remains stable and predictable under the hood.",
     image: "/images/elearning.png",
     liveLink: "https://e-learning-app-sand.vercel.app/",
     githubLink: "https://github.com/PratikPatidar/eLearning/",
     tags: ["React", "Node.js", "MongoDB", "JWT"],
+  },
+  {
+    title: "Ecomzy E-Commerce",
+    description: "An e-commerce prototype featuring dynamic product listings, cart management, and robust payment integration.\n\nI focused heavily on defensive engineering—ensuring the frontend architecture could gracefully handle API latency and maintain a flawless user experience across all devices.",
+    image: "/images/ecomzy.png",
+    liveLink: "#",
+    githubLink: "https://github.com/PratikPatidar",
+    tags: ["React", "Redux", "Tailwind", "REST API"],
   }
 ];
 
 const skillCategories = [
   {
-    title: "Core Engineering",
-    skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "DOM manipulation"],
+    title: "The Core",
+    skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "DOM Manipulation"],
     icon: <FaJs className="text-yellow-400" />
   },
   {
-    title: "Frameworks & Architecture",
+    title: "The Frameworks",
     skills: ["React.js", "Next.js (SSR)", "SvelteKit"],
     icon: <FaReact className="text-blue-400" />
   },
   {
     title: "State & Data",
-    skills: ["Redux Toolkit", "Context API", "Svelte Stores", "Zod validation"],
+    skills: ["Redux Toolkit", "Svelte Stores", "Context API", "Zod Validation"],
     icon: <SiRedux className="text-purple-500" />
   },
   {
-    title: "Tooling & Performance",
-    skills: ["Vite/Webpack", "Code-splitting", "Lazy loading"],
+    title: "Performance & Tooling",
+    skills: ["Vite", "Webpack", "JWT Auth", "RESTful APIs", "GitLab CI/CD"],
     icon: <SiVite className="text-yellow-400" />
-  },
-  {
-    title: "API & Integration",
-    skills: ["REST APIs", "JWT Auth", "Async/Await", "AbortController"],
-    icon: <SiPostman className="text-orange-500" />
   }
 ];
 
@@ -127,27 +122,25 @@ export default function PortfolioScene() {
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col justify-center relative">
             <FadeIn>
-              <h1 className="text-7xl md:text-9xl font-extrabold tracking-tighter mb-8 text-gradient">
-                Pratik<br />Patidar.
+              <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 text-gradient leading-[1.1]">
+                Hi, I'm Pratik Patidar.<br />
+                <span className="text-5xl md:text-7xl text-white/80">I don't just build User Interfaces.</span><br />
+                <span className="text-5xl md:text-7xl text-accent-gradient">I engineer them for the browser.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed mb-12 font-medium">
-                Frontend Engineer with over a year of production experience, mostly building fast, clean, and scalable web apps.
+              <p className="text-xl md:text-2xl text-white/70 max-w-3xl leading-relaxed mb-12 font-medium">
+                Frontend Engineer | Next.js • React.js • SvelteKit<br/>
+                Crafting high-performance, scalable web applications by keeping the main thread free and the state predictable.
               </p>
             </FadeIn>
             <FadeIn delay={0.2} className="flex flex-wrap gap-6 items-center">
-              <a href="mailto:pratikpatidar7990@gmail.com" className="px-10 py-4 bg-white text-black font-bold rounded-xl hover:scale-105 active:scale-95 transition-all">
-                Let&apos;s Talk
+              <a href="#projects" className="px-10 py-4 bg-white text-black font-bold rounded-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                🔥 View My Work
               </a>
-              <div className="flex gap-4">
-                <a href="https://linkedin.com/in/pratik-patidar" target="_blank" rel="noreferrer" className="p-4 glass-card rounded-xl hover:scale-110 transition-transform">
-                  <FaLinkedin size={22} />
-                </a>
-                <a href="https://github.com/pratik-patidar" target="_blank" rel="noreferrer" className="p-4 glass-card rounded-xl hover:scale-110 transition-transform">
-                  <FaGithub size={22} />
-                </a>
-              </div>
+              <a href="/resume%20(13).pdf" target="_blank" className="px-10 py-4 glass-card text-white font-bold rounded-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
+                📄 Grab My Resume
+              </a>
             </FadeIn>
             
             <motion.div 
@@ -159,42 +152,38 @@ export default function PortfolioScene() {
             </motion.div>
           </section>
 
-          {/* Professional Summary Section */}
+          {/* About Me Section */}
           <section id="about" className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 01. Who I Am</h2>
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 01. Beyond the Frameworks</h2>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-                <div className="md:col-span-8 text-3xl md:text-4xl font-bold leading-tight text-gradient">
-                  I&apos;m a developer who actually cares about <span className="text-accent-gradient">how things work under the hood.</span>
-                </div>
-                <div className="md:col-span-4 space-y-6 text-lg text-white/60 font-medium pt-4 border-t md:border-t-0 md:border-l border-white/10 md:pl-12">
-                  <p>Before jumping into the latest shiny frameworks, I made sure to really understand vanilla JavaScript—stuff like closures, async logic, and how the DOM actually behaves.</p>
-                  <p>Day-to-day, my biggest focus is keeping state predictable and making sure the UI doesn&apos;t crash when dealing with messy data.</p>
+                <div className="md:col-span-12 space-y-6 text-xl md:text-2xl text-white/70 font-medium leading-relaxed">
+                  <p>In a frontend ecosystem obsessed with the newest tools, I stay grounded in the fundamentals. I am a Frontend Engineer with over a year of rigorous production experience, specializing in complex, data-heavy web applications.</p>
+                  <p>While my daily toolkit includes Next.js and SvelteKit, my real focus is on what happens under the hood: memory management, event loops, closures, and DOM optimization. I believe that a great UI is not just about pixel-perfect CSS; it's about handling high-frequency data streams without dropping frames.</p>
+                  <p>From resolving deep-rooted asynchronous race conditions to restructuring global state for enterprise dashboards, my goal is always the same: to write code that is as predictable as it is performant.</p>
+                  <p>When I am not auditing component lifecycles or slicing Time-to-Interactive (TTI) metrics, you’ll find me exploring scalable frontend architectures and minimalistic design patterns.</p>
                 </div>
               </div>
             </FadeIn>
           </section>
 
-          {/* Technical Skills Section */}
+          {/* Core Philosophy Section */}
           <section className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 02. What I Use</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {skillCategories.map((cat, i) => (
-                  <div key={cat.title} className="p-8 glass-card rounded-[2rem] group">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="text-3xl">{cat.icon}</div>
-                      <h3 className="text-xl font-bold text-white">{cat.title}</h3>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {cat.skills.map(skill => (
-                        <span key={skill} className="px-4 py-2 bg-white/5 text-white/60 text-sm font-medium rounded-xl border border-white/5 hover:border-white/20 hover:text-white transition-all">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 02. How I Build</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="p-8 glass-card rounded-[2rem] group hover:scale-[1.02] transition-transform">
+                  <h3 className="text-2xl font-bold text-white mb-4">Performance First</h3>
+                  <p className="text-white/60 leading-relaxed">Users shouldn't pay the cost of heavy JavaScript. I aggressively implement route-level code splitting, dynamic imports, and lazy loading to keep the initial payload feather-light.</p>
+                </div>
+                <div className="p-8 glass-card rounded-[2rem] group hover:scale-[1.02] transition-transform">
+                  <h3 className="text-2xl font-bold text-white mb-4">Predictable State</h3>
+                  <p className="text-white/60 leading-relaxed">A UI should never lie to the user. I design atomic, strictly controlled state architectures using Redux and Svelte Stores to ensure a single, unquestionable source of truth.</p>
+                </div>
+                <div className="p-8 glass-card rounded-[2rem] group hover:scale-[1.02] transition-transform">
+                  <h3 className="text-2xl font-bold text-white mb-4">Defensive Engineering</h3>
+                  <p className="text-white/60 leading-relaxed">The network is unpredictable. I build robust API layers utilizing strict TypeScript interfaces and AbortControllers to prevent race conditions, stale data, and silent runtime crashes.</p>
+                </div>
               </div>
             </FadeIn>
           </section>
@@ -202,58 +191,50 @@ export default function PortfolioScene() {
           {/* Experience Section */}
           <section id="experience" className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 03. What I've Done</h2>
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 03. Where I've Made an Impact</h2>
               <div className="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[80px] group-hover:bg-blue-500/10 transition-colors" />
                 <div className="relative z-10">
-                  <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-12">
+                  <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-8">
                     <div>
-                      <h3 className="text-4xl font-bold mb-2">Frontend Engineer</h3>
-                      <p className="text-blue-400 text-xl font-medium">Techstuff Private Limited</p>
+                      <h3 className="text-4xl font-bold mb-2">Frontend Engineer <span className="text-blue-400">@ Techstuff Private Limited</span></h3>
+                      <p className="text-white/50 text-lg font-medium">Timeline: Feb 2025 - Present</p>
                     </div>
-                    <p className="text-white/30 font-bold uppercase tracking-widest text-sm">Feb 2025 — Present</p>
                   </div>
                   
                   <div className="flex flex-wrap gap-3 mb-10">
-                    {['SvelteKit', 'TypeScript', 'Tailwind CSS'].map(tech => (
+                    {['SvelteKit', 'TypeScript', 'Tailwind CSS', 'Svelte Stores'].map(tech => (
                         <span key={tech} className="px-3 py-1 bg-white/5 text-xs font-bold text-white/40 rounded-lg border border-white/5 uppercase tracking-tighter">{tech}</span>
                     ))}
                   </div>
 
                   <ul className="space-y-8 text-xl text-white/60 max-w-4xl leading-relaxed">
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold mt-1">01</span>
+                        <span className="text-blue-500 font-bold mt-1">✦</span>
                         <div>
-                            <span className="text-white block mb-1 font-bold">Making Things Fast</span>
-                            <p className="text-lg">Spent a lot of time debugging data-heavy tables that were lagging. By digging into component lifecycles and cutting out useless re-renders, I managed to get the layouts scrolling smoothly again.</p>
+                            <span className="text-white block mb-1 font-bold">The Project</span>
+                            <p className="text-lg">Core contributor to 'Mercanis', an enterprise-scale supplier management platform handling massive datasets and multi-step user workflows.</p>
                         </div>
                     </li>
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold mt-1">02</span>
+                        <span className="text-blue-500 font-bold mt-1">✦</span>
                         <div>
-                            <span className="text-white block mb-1 font-bold">Fixing the State</span>
-                            <p className="text-lg">Refactored our state management using Svelte Stores to create a single, reliable source of truth. This finally put an end to weird UI bugs caused by rapid data updates.</p>
+                            <span className="text-white block mb-1 font-bold">The Challenge</span>
+                            <p className="text-lg">The application suffered from layout stutters during rapid data updates, and unpredictable API latency caused severe race conditions in dashboard filters.</p>
                         </div>
                     </li>
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold mt-1">03</span>
+                        <span className="text-blue-500 font-bold mt-1">✦</span>
                         <div>
-                            <span className="text-white block mb-1 font-bold">Cutting the Fat</span>
-                            <p className="text-lg">Sped up our initial load times by aggressively lazy-loading routes and splitting our code so users only download what they actually need.</p>
+                            <span className="text-white block mb-1 font-bold">The Solution</span>
+                            <p className="text-lg">I audited the component tree to eliminate unnecessary re-paints and enforced a strict state architecture using Svelte Stores. To secure the network layer, I integrated `AbortController` systems to cancel pending requests during rapid user interactions.</p>
                         </div>
                     </li>
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold mt-1">04</span>
+                        <span className="text-blue-500 font-bold mt-1">✦</span>
                         <div>
-                            <span className="text-white block mb-1 font-bold">Building the Blocks</span>
-                            <p className="text-lg">Put together a clean, reusable component library from scratch for our supplier platform, focusing heavily on keeping the DOM simple and CSS scoped.</p>
-                        </div>
-                    </li>
-                    <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold mt-1">05</span>
-                        <div>
-                            <span className="text-white block mb-1 font-bold">Taming APIs</span>
-                            <p className="text-lg">Wrote the integration layer for our REST APIs and JWT auth. I also wired up abort controllers to kill pending requests, which fixed a bunch of race conditions we were having with stale data.</p>
+                            <span className="text-white block mb-1 font-bold">The Impact</span>
+                            <p className="text-lg">Successfully eliminated data inconsistencies and optimized asset delivery via Vite, shrinking the Time-to-Interactive (TTI) by an impressive 35%.</p>
                         </div>
                     </li>
                   </ul>
@@ -265,7 +246,7 @@ export default function PortfolioScene() {
           {/* Key Projects Section */}
           <section id="projects" className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 04. Selected Work</h2>
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 04. Code in Action</h2>
               <div className="grid grid-cols-1 gap-12">
                 {projects.map((project, index) => (
                   <div key={index} className="group glass-card p-4 rounded-[2rem] flex flex-col md:flex-row gap-10 items-center">
@@ -300,24 +281,26 @@ export default function PortfolioScene() {
             </FadeIn>
           </section>
 
-          {/* Education Section */}
+          {/* Technical Skills Section */}
           <section className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 05. Education & Focus</h2>
-              <div className="glass-card p-12 rounded-[2.5rem] grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h3 className="text-3xl font-bold mb-2">Bachelor of Technology</h3>
-                    <p className="text-xl text-white/70">Computer Science & Engineering</p>
-                    <p className="text-lg text-white/50 mt-1">Barkatullah University, Bhopal</p>
-                    <div className="mt-6">
-                        <p className="text-blue-400 text-3xl font-bold">7.89 CGPA</p>
-                        <p className="text-white/30 font-bold uppercase tracking-widest text-sm mt-2">2020 — 2024</p>
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 05. The Tech Arsenal</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {skillCategories.map((cat, i) => (
+                  <div key={cat.title} className="p-8 glass-card rounded-[2rem] group">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="text-3xl">{cat.icon}</div>
+                      <h3 className="text-xl font-bold text-white">{cat.title}</h3>
                     </div>
-                </div>
-                <div className="border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-12 flex flex-col justify-center">
-                    <p className="text-lg text-white/70 mb-4"><span className="text-white font-bold">Languages:</span> English, Hindi.</p>
-                    <p className="text-lg text-white/70"><span className="text-white font-bold">Focus:</span> Building efficient, minimal codebases and scalable web interfaces.</p>
-                </div>
+                    <div className="flex flex-wrap gap-2">
+                      {cat.skills.map(skill => (
+                        <span key={skill} className="px-4 py-2 bg-white/5 text-white/60 text-sm font-medium rounded-xl border border-white/5 hover:border-white/20 hover:text-white transition-all">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </FadeIn>
           </section>
@@ -335,18 +318,21 @@ export default function PortfolioScene() {
           {/* Contact Section */}
           <section id="contact" className="scroll-mt-32 py-40 text-center">
              <FadeIn>
-                <h2 className="text-7xl md:text-9xl font-extrabold mb-12 tracking-tighter text-gradient leading-[0.8]">Start a<br />conversation.</h2>
-                <p className="text-2xl text-white/40 max-w-xl mx-auto mb-16 font-medium">
-                   Currently open for new opportunities and interesting collaborations.
+                <h2 className="text-5xl md:text-7xl font-extrabold mb-12 tracking-tighter text-gradient leading-[1.1]">Let's build something solid together.</h2>
+                <p className="text-xl text-white/60 max-w-3xl mx-auto mb-16 font-medium leading-relaxed">
+                   I am currently open to new opportunities where I can tackle complex frontend scaling challenges and contribute to a fast-paced, engineering-first team. If you're looking for a developer who understands both the user experience and the browser engine, we should talk.
                 </p>
                 <div className="flex flex-col items-center gap-8">
                     <a href="mailto:pratikpatidar7990@gmail.com" className="group relative inline-flex items-center gap-4 px-12 py-6 bg-white text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all text-xl">
                         Say Hello
                         <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform" />
                     </a>
-                    <div className="space-y-2">
-                        <p className="text-white/30 font-bold uppercase tracking-widest text-xs">pratikpatidar7990@gmail.com</p>
-                        <p className="text-white/30 font-bold uppercase tracking-widest text-xs">+91 8269647990</p>
+                    <div className="flex gap-6 text-white/40 font-bold uppercase tracking-widest text-xs">
+                        <a href="mailto:pratikpatidar7990@gmail.com" className="hover:text-blue-400 transition-colors">Email</a>
+                        <span>|</span>
+                        <a href="https://linkedin.com/in/pratik-patidar" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors">LinkedIn</a>
+                        <span>|</span>
+                        <a href="https://github.com/pratik-patidar" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition-colors">GitHub</a>
                     </div>
                 </div>
              </FadeIn>
