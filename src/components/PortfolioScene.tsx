@@ -25,6 +25,14 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
 
 const projects = [
   {
+    title: "Mercanis B2B Supplier Marketplace",
+    description: "I played a core role in building an enterprise-grade platform handling over 500K+ daily interactions and ₹50+ crore in monthly GMV.\n\nI architected a real-time supplier dashboard using WebSockets (Socket.io) that pushed live updates to thousands of concurrent users. For the financial side, I integrated Razorpay checkout with a rock-solid 3-layer reconciliation system that bumped our payment accuracy to 99.95%.\n\nOn the performance front, I aggressively optimized the frontend—cutting the bundle size by 40% and reducing initial load times by 35% through dynamic imports and strategic code splitting.",
+    image: "/images/page.png", // Keeping placeholder image as specific image wasn't provided
+    liveLink: "#",
+    githubLink: "#",
+    tags: ["React", "Redux", "WebSockets", "Razorpay"],
+  },
+  {
     title: "Recruitment Scheduling Dashboard",
     description: "I built this scheduling grid from the ground up to handle massive lists of candidates without lagging. It uses virtualized lists and smart pagination to keep scrolling butter-smooth.\n\nTo keep things from breaking, I locked down our entire data pipeline with strict TypeScript interfaces—which honestly saved us from countless runtime errors.\n\nFor the UI, I managed the global state using Redux so that multi-step user actions felt seamless, ensuring the screen didn't flicker every time an API call fired.",
     image: "/images/page.png",
@@ -39,14 +47,6 @@ const projects = [
     liveLink: "https://e-learning-app-sand.vercel.app/",
     githubLink: "https://github.com/PratikPatidar/eLearning/",
     tags: ["React", "Node.js", "MongoDB", "JWT"],
-  },
-  {
-    title: "Ecomzy E-Commerce",
-    description: "An e-commerce prototype featuring dynamic product listings, cart management, and payment integration.\n\nI focused heavily on making the design fully responsive and keeping the performance snappy.",
-    image: "/images/ecomzy.png",
-    liveLink: "#",
-    githubLink: "https://github.com/PratikPatidar",
-    tags: ["React", "Redux", "Tailwind", "REST API"],
   }
 ];
 
@@ -105,14 +105,14 @@ export default function PortfolioScene() {
     <div ref={containerRef} className="relative">
       
       {/* Interactive Background */}
-      <div className="fixed inset-0 z-[-1] overflow-hidden">
+      <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <Background3D />
-        <motion.div className="mouse-follower" style={{ left: mouseX, top: mouseY }} />
+        <motion.div className="mouse-follower pointer-events-none" style={{ left: mouseX, top: mouseY }} />
         <motion.div 
-          className="mesh-bg absolute inset-[-20%]"
+          className="mesh-bg absolute inset-[-20%] pointer-events-none"
           style={{ rotate: meshRotate, scale: meshScale }} 
         />
-        <div className="grid-overlay absolute inset-0" />
+        <div className="grid-overlay absolute inset-0 pointer-events-none" />
       </div>
 
       {/* Progress Bar */}
@@ -127,10 +127,6 @@ export default function PortfolioScene() {
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col justify-center relative">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold tracking-widest uppercase mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-                Available for New Projects
-              </div>
               <h1 className="text-7xl md:text-9xl font-extrabold tracking-tighter mb-8 text-gradient">
                 Pratik<br />Patidar.
               </h1>

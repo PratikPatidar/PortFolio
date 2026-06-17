@@ -92,3 +92,14 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
 }
+
+/* Ensure text is selectable */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #eff6ff;
+}
+
+body {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
