@@ -122,49 +122,43 @@ export default function PortfolioScene() {
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col justify-center relative pt-20">
             <FadeIn>
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold tracking-[0.2em] uppercase mb-8 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                Hi, I'm Pratik Patidar
-              </div>
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter mb-4 text-white leading-[1.05]">
-                I don't just build <br className="hidden md:block" />
-                <span className="text-white/40">User Interfaces.</span>
-              </h1>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-10 text-accent-gradient leading-[1.1] pb-2">
-                I engineer them for the browser.
+              <h2 className="text-blue-500 text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-6">
+                Frontend Engineer
               </h2>
             </FadeIn>
-            
             <FadeIn delay={0.1}>
-              <div className="flex flex-wrap items-center gap-4 text-sm md:text-base font-bold tracking-widest text-white/40 uppercase mb-8">
-                 <span className="text-white/80">Frontend Engineer</span>
-                 <span>//</span>
-                 <span>Next.js</span>
-                 <span>//</span>
-                 <span>React.js</span>
-                 <span>//</span>
-                 <span>SvelteKit</span>
-              </div>
-              <p className="text-xl md:text-2xl text-white/60 max-w-3xl leading-relaxed mb-12 font-medium">
-                Crafting high-performance, scalable web applications by keeping the main thread free and the state predictable.
+              <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-extrabold tracking-tighter mb-8 text-white leading-none">
+                Pratik<br />
+                <span className="text-white/40">Patidar.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-xl md:text-2xl text-white/50 max-w-2xl leading-relaxed mb-12 font-medium">
+                I build resilient web applications. Focusing on deep JavaScript fundamentals, scalable architectures, and predictable state.
               </p>
             </FadeIn>
             
-            <FadeIn delay={0.2} className="flex flex-wrap gap-6 items-center">
-              <a href="#projects" className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all text-lg">
-                View My Work
-                <FaArrowUpRightFromSquare size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            <FadeIn delay={0.3} className="flex flex-wrap gap-6 items-center">
+              <a href="mailto:pratikpatidar7990@gmail.com" className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all text-lg">
+                Let's Talk
               </a>
-              <a href="/resume%20(13).pdf" target="_blank" className="group inline-flex items-center gap-3 px-10 py-5 glass-card text-white font-bold rounded-2xl hover:bg-white/10 active:scale-95 transition-all text-lg">
-                Grab My Resume
-                <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform" />
-              </a>
+              <div className="flex gap-4">
+                <a href="/resume%20(13).pdf" target="_blank" className="p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center group" title="Resume">
+                  <span className="text-sm font-bold tracking-widest uppercase text-white/70 group-hover:text-white transition-colors">CV</span>
+                </a>
+                <a href="https://linkedin.com/in/pratik-patidar" target="_blank" rel="noreferrer" className="p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center text-white/70 hover:text-white">
+                  <FaLinkedin size={20} />
+                </a>
+                <a href="https://github.com/pratik-patidar" target="_blank" rel="noreferrer" className="p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center text-white/70 hover:text-white">
+                  <FaGithub size={20} />
+                </a>
+              </div>
             </FadeIn>
             
             <motion.div 
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 2 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/20"
+                className="absolute bottom-10 left-0 text-white/20"
             >
                 <FaChevronDown size={24} />
             </motion.div>
