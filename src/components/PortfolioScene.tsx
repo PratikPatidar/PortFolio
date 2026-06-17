@@ -120,33 +120,51 @@ export default function PortfolioScene() {
         <main className="max-w-5xl mx-auto space-y-48">
           
           {/* Hero Section */}
-          <section className="min-h-screen flex flex-col justify-center relative">
+          <section className="min-h-screen flex flex-col justify-center relative pt-20">
             <FadeIn>
-              <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 text-gradient leading-[1.1]">
-                Hi, I'm Pratik Patidar.<br />
-                <span className="text-5xl md:text-7xl text-white/80">I don't just build User Interfaces.</span><br />
-                <span className="text-5xl md:text-7xl text-accent-gradient">I engineer them for the browser.</span>
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold tracking-[0.2em] uppercase mb-8 backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+                Hi, I'm Pratik Patidar
+              </div>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter mb-4 text-white leading-[1.05]">
+                I don't just build <br className="hidden md:block" />
+                <span className="text-white/40">User Interfaces.</span>
               </h1>
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-10 text-accent-gradient leading-[1.1] pb-2">
+                I engineer them for the browser.
+              </h2>
             </FadeIn>
+            
             <FadeIn delay={0.1}>
-              <p className="text-xl md:text-2xl text-white/70 max-w-3xl leading-relaxed mb-12 font-medium">
-                Frontend Engineer | Next.js • React.js • SvelteKit<br/>
+              <div className="flex flex-wrap items-center gap-4 text-sm md:text-base font-bold tracking-widest text-white/40 uppercase mb-8">
+                 <span className="text-white/80">Frontend Engineer</span>
+                 <span>//</span>
+                 <span>Next.js</span>
+                 <span>//</span>
+                 <span>React.js</span>
+                 <span>//</span>
+                 <span>SvelteKit</span>
+              </div>
+              <p className="text-xl md:text-2xl text-white/60 max-w-3xl leading-relaxed mb-12 font-medium">
                 Crafting high-performance, scalable web applications by keeping the main thread free and the state predictable.
               </p>
             </FadeIn>
+            
             <FadeIn delay={0.2} className="flex flex-wrap gap-6 items-center">
-              <a href="#projects" className="px-10 py-4 bg-white text-black font-bold rounded-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
-                🔥 View My Work
+              <a href="#projects" className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all text-lg">
+                View My Work
+                <FaArrowUpRightFromSquare size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </a>
-              <a href="/resume%20(13).pdf" target="_blank" className="px-10 py-4 glass-card text-white font-bold rounded-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
-                📄 Grab My Resume
+              <a href="/resume%20(13).pdf" target="_blank" className="group inline-flex items-center gap-3 px-10 py-5 glass-card text-white font-bold rounded-2xl hover:bg-white/10 active:scale-95 transition-all text-lg">
+                Grab My Resume
+                <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform" />
               </a>
             </FadeIn>
             
             <motion.div 
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 2 }}
-                className="absolute bottom-10 left-0 text-white/20"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/20"
             >
                 <FaChevronDown size={24} />
             </motion.div>
