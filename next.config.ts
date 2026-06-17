@@ -5,8 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Note: If you deploy to a specific repository like https://github.com/NAKME12/portfolio
-  // you might need to add: basePath: '/portfolio',
+  basePath: '/PortFolio',
 };
 
 export default nextConfig;
