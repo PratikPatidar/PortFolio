@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "next build && gh-pages -d out"
+    "lint": "next lint"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
