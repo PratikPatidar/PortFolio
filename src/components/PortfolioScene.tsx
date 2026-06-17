@@ -23,7 +23,7 @@ const projects = [
   {
     title: "Recruitment Scheduling Dashboard (ATS)",
     description: "Data Handling: Architected a scheduling grid designed to manage large candidate datasets, implementing optimized list rendering and pagination for seamless scrolling. \n\nType Safety: Applied strict TypeScript interfaces across the entire data pipeline, effectively catching potential runtime failures before they hit the user's browser. \n\nUI Stability: Managed complex global state using Redux to support multi-step user actions. Ensured that API responses are handled properly, preventing UI flickering and maintaining layout integrity.",
-    image: "./images/page.png",
+    image: "/images/page.png",
     liveLink: "#",
     githubLink: "https://github.com/PratikPatidar",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Redux"],
