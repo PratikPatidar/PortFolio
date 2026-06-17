@@ -5,6 +5,10 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'fram
 import { FaGithub, FaLinkedin, FaArrowUpRightFromSquare, FaChevronDown, FaReact, FaJs, FaGitAlt } from "react-icons/fa6";
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiVite, SiWebpack, SiZod, SiPostman, SiSvelte } from "react-icons/si";
 import CourseList from '@/components/CourseList';
+import dynamic from 'next/dynamic';
+
+// Import 3D Background safely
+const Background3D = dynamic(() => import('@/components/Background3D'), { ssr: false });
 
 // --- Reusable Animation Wrapper ---
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
@@ -21,24 +25,24 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
 
 const projects = [
   {
-    title: "Recruitment Scheduling Dashboard (ATS)",
-    description: "Data Handling: Architected a scheduling grid designed to manage large candidate datasets, implementing optimized list rendering and pagination for seamless scrolling. \n\nType Safety: Applied strict TypeScript interfaces across the entire data pipeline, effectively catching potential runtime failures before they hit the user's browser. \n\nUI Stability: Managed complex global state using Redux to support multi-step user actions. Ensured that API responses are handled properly, preventing UI flickering and maintaining layout integrity.",
+    title: "Recruitment Scheduling Dashboard",
+    description: "I built this scheduling grid from the ground up to handle massive lists of candidates without lagging. It uses virtualized lists and smart pagination to keep scrolling butter-smooth.\n\nTo keep things from breaking, I locked down our entire data pipeline with strict TypeScript interfaces—which honestly saved us from countless runtime errors.\n\nFor the UI, I managed the global state using Redux so that multi-step user actions felt seamless, ensuring the screen didn't flicker every time an API call fired.",
     image: "/images/page.png",
     liveLink: "#",
     githubLink: "https://github.com/PratikPatidar",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Redux"],
   },
   {
-    title: "E-Learning Web Application",
-    description: "Secure full-stack MERN platform. Users can create courses, enroll, and manage progress. Implemented JWT authentication and complex state handling.",
+    title: "E-Learning Platform",
+    description: "A full-stack MERN application I built to make online learning simpler. It lets users create courses, enroll, and track their progress effortlessly.\n\nI handled the JWT auth workflows and made sure the state management was rock solid under the hood.",
     image: "/images/elearning.png",
     liveLink: "https://e-learning-app-sand.vercel.app/",
     githubLink: "https://github.com/PratikPatidar/eLearning/",
     tags: ["React", "Node.js", "MongoDB", "JWT"],
   },
   {
-    title: "Ecomzy",
-    description: "E-Commerce application with product management, authentication, and payment integration. Focused on responsive design and performance.",
+    title: "Ecomzy E-Commerce",
+    description: "An e-commerce prototype featuring dynamic product listings, cart management, and payment integration.\n\nI focused heavily on making the design fully responsive and keeping the performance snappy.",
     image: "/images/ecomzy.png",
     liveLink: "#",
     githubLink: "https://github.com/PratikPatidar",
@@ -49,7 +53,7 @@ const projects = [
 const skillCategories = [
   {
     title: "Core Engineering",
-    skills: ["JavaScript (ES6+)", "TypeScript (Interface-driven)", "HTML5", "CSS3", "DOM manipulation"],
+    skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "DOM manipulation"],
     icon: <FaJs className="text-yellow-400" />
   },
   {
@@ -59,17 +63,17 @@ const skillCategories = [
   },
   {
     title: "State & Data",
-    skills: ["Redux Toolkit", "Context API", "Svelte Stores", "Zod schema validation"],
+    skills: ["Redux Toolkit", "Context API", "Svelte Stores", "Zod validation"],
     icon: <SiRedux className="text-purple-500" />
   },
   {
     title: "Tooling & Performance",
-    skills: ["Vite/Webpack", "Code-splitting strategies", "Lazy loading"],
+    skills: ["Vite/Webpack", "Code-splitting", "Lazy loading"],
     icon: <SiVite className="text-yellow-400" />
   },
   {
     title: "API & Integration",
-    skills: ["RESTful APIs", "JWT Authentication", "Async/Await", "AbortController"],
+    skills: ["REST APIs", "JWT Auth", "Async/Await", "AbortController"],
     icon: <SiPostman className="text-orange-500" />
   }
 ];
@@ -102,6 +106,7 @@ export default function PortfolioScene() {
       
       {/* Interactive Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden">
+        <Background3D />
         <motion.div className="mouse-follower" style={{ left: mouseX, top: mouseY }} />
         <motion.div 
           className="mesh-bg absolute inset-[-20%]"
@@ -131,8 +136,8 @@ export default function PortfolioScene() {
               </h1>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="text-xl md:text-2xl text-white/50 max-w-2xl leading-relaxed mb-12 font-medium">
-                Frontend Engineer with <span className="text-white">1.4+ years of production experience</span> focusing on clean architectures and responsive interfaces.
+              <p className="text-xl md:text-2xl text-white/70 max-w-2xl leading-relaxed mb-12 font-medium">
+                Frontend Engineer with over a year of production experience, mostly building fast, clean, and scalable web apps.
               </p>
             </FadeIn>
             <FadeIn delay={0.2} className="flex flex-wrap gap-6 items-center">
@@ -161,14 +166,14 @@ export default function PortfolioScene() {
           {/* Professional Summary Section */}
           <section id="about" className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 01. Summary</h2>
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 01. Who I Am</h2>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                 <div className="md:col-span-8 text-3xl md:text-4xl font-bold leading-tight text-gradient">
-                  I prioritize <span className="text-accent-gradient">vanilla JavaScript fundamentals</span>—closures, async patterns, and DOM manipulation—before layering on frameworks.
+                  I&apos;m a developer who actually cares about <span className="text-accent-gradient">how things work under the hood.</span>
                 </div>
-                <div className="md:col-span-4 space-y-6 text-lg text-white/40 font-medium pt-4 border-t md:border-t-0 md:border-l border-white/10 md:pl-12">
-                  <p>My work centers on building predictable state management.</p>
-                  <p>Ensuring UI stability while interacting with complex data structures.</p>
+                <div className="md:col-span-4 space-y-6 text-lg text-white/60 font-medium pt-4 border-t md:border-t-0 md:border-l border-white/10 md:pl-12">
+                  <p>Before jumping into the latest shiny frameworks, I made sure to really understand vanilla JavaScript—stuff like closures, async logic, and how the DOM actually behaves.</p>
+                  <p>Day-to-day, my biggest focus is keeping state predictable and making sure the UI doesn&apos;t crash when dealing with messy data.</p>
                 </div>
               </div>
             </FadeIn>
@@ -177,7 +182,7 @@ export default function PortfolioScene() {
           {/* Technical Skills Section */}
           <section className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 02. Technical Skills</h2>
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 02. What I Use</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {skillCategories.map((cat, i) => (
                   <div key={cat.title} className="p-8 glass-card rounded-[2rem] group">
@@ -201,7 +206,7 @@ export default function PortfolioScene() {
           {/* Experience Section */}
           <section id="experience" className="scroll-mt-32">
             <FadeIn>
-              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 03. Experience</h2>
+              <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 03. What I've Done</h2>
               <div className="glass-card p-12 rounded-[2.5rem] relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 blur-[80px] group-hover:bg-blue-500/10 transition-colors" />
                 <div className="relative z-10">
@@ -219,40 +224,40 @@ export default function PortfolioScene() {
                     ))}
                   </div>
 
-                  <ul className="space-y-8 text-xl text-white/50 max-w-4xl leading-relaxed">
+                  <ul className="space-y-8 text-xl text-white/60 max-w-4xl leading-relaxed">
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold">01</span>
+                        <span className="text-blue-500 font-bold mt-1">01</span>
                         <div>
-                            <span className="text-white block mb-1">Rendering Optimization</span>
-                            <p className="text-lg">Debugged and resolved layout stutters in data-dense tables by auditing component lifecycles and eliminating unnecessary re-paints.</p>
+                            <span className="text-white block mb-1 font-bold">Making Things Fast</span>
+                            <p className="text-lg">Spent a lot of time debugging data-heavy tables that were lagging. By digging into component lifecycles and cutting out useless re-renders, I managed to get the layouts scrolling smoothly again.</p>
                         </div>
                     </li>
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold">02</span>
+                        <span className="text-blue-500 font-bold mt-1">02</span>
                         <div>
-                            <span className="text-white block mb-1">State Architecture</span>
-                            <p className="text-lg">Enforced predictable state updates and a single source of truth using Svelte Stores, eliminating UI inconsistencies during rapid data updates.</p>
+                            <span className="text-white block mb-1 font-bold">Fixing the State</span>
+                            <p className="text-lg">Refactored our state management using Svelte Stores to create a single, reliable source of truth. This finally put an end to weird UI bugs caused by rapid data updates.</p>
                         </div>
                     </li>
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold">03</span>
+                        <span className="text-blue-500 font-bold mt-1">03</span>
                         <div>
-                            <span className="text-white block mb-1">Performance Engineering</span>
-                            <p className="text-lg">Optimized application load times through strategic route-level code-splitting and lazy loading. Minimized asset payload via Vite for faster initial rendering.</p>
+                            <span className="text-white block mb-1 font-bold">Cutting the Fat</span>
+                            <p className="text-lg">Sped up our initial load times by aggressively lazy-loading routes and splitting our code so users only download what they actually need.</p>
                         </div>
                     </li>
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold">04</span>
+                        <span className="text-blue-500 font-bold mt-1">04</span>
                         <div>
-                            <span className="text-white block mb-1">Component Modularity</span>
-                            <p className="text-lg">Built a library of reusable, semantic UI components for an enterprise supplier platform. Focused on CSS containment and DOM simplicity to ensure visual stability.</p>
+                            <span className="text-white block mb-1 font-bold">Building the Blocks</span>
+                            <p className="text-lg">Put together a clean, reusable component library from scratch for our supplier platform, focusing heavily on keeping the DOM simple and CSS scoped.</p>
                         </div>
                     </li>
                     <li className="flex gap-6 items-start group/item">
-                        <span className="text-blue-500 font-bold">05</span>
+                        <span className="text-blue-500 font-bold mt-1">05</span>
                         <div>
-                            <span className="text-white block mb-1">API Integration</span>
-                            <p className="text-lg">Handled complex RESTful API integrations and secure JWT workflows, utilizing AbortController to cancel pending requests, prevent race conditions, and avoid stale data injection.</p>
+                            <span className="text-white block mb-1 font-bold">Taming APIs</span>
+                            <p className="text-lg">Wrote the integration layer for our REST APIs and JWT auth. I also wired up abort controllers to kill pending requests, which fixed a bunch of race conditions we were having with stale data.</p>
                         </div>
                     </li>
                   </ul>
@@ -279,7 +284,7 @@ export default function PortfolioScene() {
                         ))}
                       </div>
                       <h3 className="text-3xl font-bold mb-4 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                      <div className="text-sm text-white/50 mb-8 space-y-4 whitespace-pre-wrap leading-relaxed">
+                      <div className="text-base text-white/60 mb-8 space-y-4 whitespace-pre-wrap leading-relaxed">
                         {project.description.split('\n\n').map((para, i) => (
                             <p key={i}>{para}</p>
                         ))}
@@ -306,16 +311,16 @@ export default function PortfolioScene() {
               <div className="glass-card p-12 rounded-[2.5rem] grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
                     <h3 className="text-3xl font-bold mb-2">Bachelor of Technology</h3>
-                    <p className="text-xl text-white/60">Computer Science & Engineering</p>
-                    <p className="text-lg text-white/40 mt-1">Barkatullah University, Bhopal</p>
+                    <p className="text-xl text-white/70">Computer Science & Engineering</p>
+                    <p className="text-lg text-white/50 mt-1">Barkatullah University, Bhopal</p>
                     <div className="mt-6">
                         <p className="text-blue-400 text-3xl font-bold">7.89 CGPA</p>
                         <p className="text-white/30 font-bold uppercase tracking-widest text-sm mt-2">2020 — 2024</p>
                     </div>
                 </div>
                 <div className="border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-12 flex flex-col justify-center">
-                    <p className="text-lg text-white/60 mb-4"><span className="text-white font-bold">Languages:</span> English, Hindi.</p>
-                    <p className="text-lg text-white/60"><span className="text-white font-bold">Focus:</span> Building efficient, minimal codebases and scalable web interfaces.</p>
+                    <p className="text-lg text-white/70 mb-4"><span className="text-white font-bold">Languages:</span> English, Hindi.</p>
+                    <p className="text-lg text-white/70"><span className="text-white font-bold">Focus:</span> Building efficient, minimal codebases and scalable web interfaces.</p>
                 </div>
               </div>
             </FadeIn>
@@ -335,7 +340,7 @@ export default function PortfolioScene() {
           <section id="contact" className="scroll-mt-32 py-40 text-center">
              <FadeIn>
                 <h2 className="text-7xl md:text-9xl font-extrabold mb-12 tracking-tighter text-gradient leading-[0.8]">Start a<br />conversation.</h2>
-                <p className="text-2xl text-white/30 max-w-xl mx-auto mb-16 font-medium">
+                <p className="text-2xl text-white/40 max-w-xl mx-auto mb-16 font-medium">
                    Currently open for new opportunities and interesting collaborations.
                 </p>
                 <div className="flex flex-col items-center gap-8">
@@ -344,15 +349,15 @@ export default function PortfolioScene() {
                         <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform" />
                     </a>
                     <div className="space-y-2">
-                        <p className="text-white/20 font-bold uppercase tracking-widest text-xs">pratikpatidar7990@gmail.com</p>
-                        <p className="text-white/20 font-bold uppercase tracking-widest text-xs">+91 8269647990</p>
+                        <p className="text-white/30 font-bold uppercase tracking-widest text-xs">pratikpatidar7990@gmail.com</p>
+                        <p className="text-white/30 font-bold uppercase tracking-widest text-xs">+91 8269647990</p>
                     </div>
                 </div>
              </FadeIn>
           </section>
 
           {/* Footer */}
-          <footer className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-white/20 text-[10px] font-bold tracking-[0.2em] uppercase">
+          <footer className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-white/30 text-[10px] font-bold tracking-[0.2em] uppercase">
              <p>© 2026 PRATIK PATIDAR</p>
              <div className="flex gap-8">
                 <span className="hover:text-blue-500 transition-colors cursor-default">Next.js 16</span>
