@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pratik Patidar | Frontend Engineer Portfolio
 
-## Getting Started
+> High-performance, scalable web portfolio built with Next.js, React, and Tailwind CSS.
 
-First, run the development server:
+![Portfolio Preview](./public/images/ats_dashboard.jpg) <!-- Optional preview image -->
+
+## 🚀 Architecture & Engineering Philosophy
+This portfolio is engineered to demonstrate rigorous production standards, focusing on:
+- **Performance First:** Route-level code splitting, dynamic imports, and lazy loading for a feather-light initial payload.
+- **Predictable State:** Clean component architecture with strict unidirectional data flow and modular design.
+- **Defensive Engineering:** Bulletproof TypeScript integrations, custom layout optimizations, and graceful degradation.
+- **Modern UI/UX:** Premium glassmorphism, dynamic mesh gradients, and meticulously calibrated typography.
+
+## 💻 Tech Stack
+- **Core Framework:** Next.js (App Router) & React 18
+- **Styling Engine:** Tailwind CSS + Custom CSS Variables
+- **Animations:** Framer Motion (Scroll reveals, layout transitions)
+- **Typography:** Inter (Body) & Plus Jakarta Sans (Headings)
+- **Infrastructure as Code:** Render Blueprint (`render.yaml`)
+
+## 🛠️ Local Development
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/PratikPatidar/PortFolio.git
+cd PortFolio
+npm install
+```
+
+Start the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚢 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for seamless deployment on **Render** using the included `render.yaml` Blueprint. 
 
-## Learn More
+## 📫 Let's Connect
+- **Email:** pratikpatidar7990@gmail.com
+- **LinkedIn:** [Pratik Patidar](https://linkedin.com/in/pratik-patidar)
+- **GitHub:** [pratik-patidar](https://github.com/pratik-patidar)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Designed and engineered by Pratik Patidar. © 2026*
