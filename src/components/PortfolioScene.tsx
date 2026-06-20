@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaArrowUpRightFromSquare, FaChevronDown, FaArrowDown, FaReact, FaJs, FaGitAlt, FaNetworkWired } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaArrowUpRightFromSquare, FaChevronDown, FaArrowDown, FaReact, FaJs, FaGitAlt, FaNetworkWired, FaPaperPlane } from "react-icons/fa6";
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiVite, SiWebpack, SiZod, SiPostman, SiSvelte } from "react-icons/si";
 import dynamic from 'next/dynamic';
 
