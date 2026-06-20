@@ -150,31 +150,33 @@ export default function PortfolioScene() {
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 text-white leading-none">
-                Pratik<br />
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-8 text-white leading-none">
+                Pratik <br className="md:hidden" />
                 <span className="text-white/40">Patidar.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <p className="text-xl md:text-2xl text-white/50 max-w-2xl leading-relaxed mb-12 font-medium">
+              <p className="text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed mb-12 font-medium">
                 I’m a Frontend Engineer who loves building fast, reliable web apps. I care deeply about clean code, strong JavaScript fundamentals, and creating user experiences that actually feel good to use.
               </p>
             </FadeIn>
             
-            <FadeIn delay={0.3} className="flex flex-wrap gap-4 sm:gap-6 items-center">
-              <a href="#contact" className="group relative inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all text-base sm:text-lg whitespace-nowrap shrink-0">
-                Let's Talk
-              </a>
-              <button onClick={() => setIsResumeOpen(true)} className="group relative inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 glass-card font-bold rounded-full hover:bg-white/10 hover:scale-105 active:scale-95 transition-all text-base sm:text-lg shrink-0">
-                <span className="text-white/70 group-hover:text-white transition-colors">Resume</span>
-              </button>
-              <div className="flex gap-3 sm:gap-4 shrink-0">
-                <a href="https://linkedin.com/in/pratik-patidar" target="_blank" rel="noreferrer" className="p-4 sm:p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center text-white/70 hover:text-white">
-                  <FaLinkedin size={20} />
+            <FadeIn delay={0.3}>
+              <div className="flex flex-wrap gap-4 items-center">
+                <a href="#contact" className="group relative inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all text-sm sm:text-base whitespace-nowrap shrink-0">
+                  <FaPaperPlane className="text-blue-500 group-hover:rotate-12 transition-transform" /> Let's Talk
                 </a>
-                <a href="https://github.com/pratik-patidar" target="_blank" rel="noreferrer" className="p-4 sm:p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center text-white/70 hover:text-white">
-                  <FaGithub size={20} />
-                </a>
+                <button onClick={() => setIsResumeOpen(true)} className="group relative inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-4 glass-card font-bold rounded-full hover:bg-white/10 hover:scale-105 active:scale-95 transition-all text-sm sm:text-base shrink-0">
+                  <span className="text-white/70 group-hover:text-white transition-colors">Resume</span>
+                </button>
+                <div className="flex gap-3 sm:gap-4 shrink-0">
+                  <a href="https://linkedin.com/in/pratik-patidar" target="_blank" rel="noreferrer" className="p-4 sm:p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center text-white/70 hover:text-white">
+                    <FaLinkedin size={20} />
+                  </a>
+                  <a href="https://github.com/pratik-patidar" target="_blank" rel="noreferrer" className="p-4 sm:p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center text-white/70 hover:text-white">
+                    <FaGithub size={20} />
+                  </a>
+                </div>
               </div>
             </FadeIn>
 
@@ -188,11 +190,11 @@ export default function PortfolioScene() {
           </section>
 
           {/* About Me Section */}
-          <section id="about" className="scroll-mt-32">
+          <section id="about" className="scroll-mt-32 max-w-4xl">
             <FadeIn>
               <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 01. Beyond the Frameworks</h2>
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-                <div className="md:col-span-12 space-y-6 text-xl md:text-2xl text-white/70 font-medium leading-relaxed">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+                <div className="md:col-span-12 space-y-6 text-lg md:text-xl text-white/70 font-medium leading-relaxed">
                   <p>I’m a Frontend Engineer who genuinely cares about how things work under the hood. While it's easy to get caught up in the hype of new frameworks, I've spent my time building production applications by focusing heavily on the fundamentals: memory management, closures, and keeping the DOM lean.</p>
                   <p>My daily toolkit includes Next.js, React, and SvelteKit, but my real job is making sure the user experience doesn't break when an app is flooded with real-time data. I actually enjoy fixing the annoying stuff—whether that’s tracking down a weird layout stutter, cleaning up a messy global state, or figuring out why a page is taking too long to load.</p>
                   <p>To me, great engineering is about making complex things feel simple and predictable. When I'm not writing code, I'm usually reading up on software architecture or experimenting with new ways to make web apps feel native and lightning fast.</p>
@@ -227,10 +229,10 @@ export default function PortfolioScene() {
             <FadeIn>
               <div className="mb-16">
                 <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-4 flex items-center gap-4">
-                  <span className="w-8 h-[1px] bg-blue-500"></span>
+                  <span className="w-12 h-[1px] bg-blue-500/50"></span>
                   / 03. Experience
                 </h2>
-                <h3 className="text-4xl md:text-5xl font-bold text-white">Where I've Made an <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Impact</span></h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-white">Where I've Made an <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Impact</span></h3>
               </div>
               
               <div className="relative flex flex-col gap-12 md:gap-16">
@@ -247,56 +249,56 @@ export default function PortfolioScene() {
                   <div className="glass-card flex-1 p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group-hover:-translate-y-2 transition-all duration-500 border border-white/5 group-hover:border-purple-500/30">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 blur-[100px] group-hover:bg-purple-500/20 transition-colors duration-700" />
                     
-                    <div className="relative z-10">
-                      <div className="mb-10">
-                        <h3 className="text-3xl md:text-4xl font-bold mb-2 text-white">Frontend Engineer</h3>
-                        <div className="flex items-center gap-3">
-                          <p className="text-xl text-purple-400 font-medium">@ Undigicore</p>
-                          <span className="px-2 py-0.5 bg-white/10 text-white/50 rounded text-xs font-bold uppercase tracking-wider">Remote</span>
+                    <div className="relative flex flex-col md:flex-row gap-8">
+                      <div className="md:w-1/3 shrink-0 pt-2">
+                        <div className="sticky top-32">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">Frontend Engineer</h3>
+                          <div className="flex flex-wrap items-center gap-3 mb-6">
+                            <p className="text-lg text-purple-400 font-medium">@ Undigicore</p>
+                            <span className="px-2 py-0.5 bg-white/10 text-white/50 rounded text-xs font-bold uppercase tracking-wider">Remote</span>
+                          </div>
                         </div>
                       </div>
                       
-                      {/* Timeline Progression Container */}
-                      <div className="relative pl-6 mb-12">
-                        <div className="absolute left-0 top-3 bottom-3 w-px bg-white/20"></div>
+                      <div className="flex-1">
+                        {/* Timeline Progression Container */}
+                        <div className="relative pl-6 mb-12">
+                          <div className="absolute left-0 top-3 bottom-3 w-px bg-white/20"></div>
+                          
+                          {/* Intern Phase */}
+                          <div className="relative mb-8 group/phase">
+                            <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-white/40 group-hover/phase:border-purple-400 transition-colors z-10"></div>
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                              <span className="font-bold text-lg text-white group-hover/phase:text-purple-300 transition-colors">Frontend Engineering Intern</span>
+                              <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs font-bold uppercase tracking-wider w-fit">Aug 2023 - Nov 2023</span>
+                            </div>
+                          </div>
+
+                          {/* Freelance Phase */}
+                          <div className="relative group/phase">
+                            <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-purple-500 group-hover/phase:bg-purple-500 transition-colors z-10 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                              <span className="font-bold text-lg text-white group-hover/phase:text-purple-300 transition-colors">Freelance Frontend Engineer</span>
+                              <span className="px-3 py-1 bg-purple-500/10 text-purple-300/80 rounded-full text-xs font-bold uppercase tracking-wider w-fit">Jul 2024 - Dec 2024</span>
+                            </div>
+                          </div>
+                        </div>
                         
-                        {/* Intern Phase */}
-                        <div className="relative mb-8 group/phase">
-                          <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-white/40 group-hover/phase:border-purple-400 transition-colors z-10"></div>
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span className="font-bold text-lg text-white group-hover/phase:text-purple-300 transition-colors">Frontend Engineering Intern</span>
-                            <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs font-bold uppercase tracking-wider w-fit">Aug 2023 - Nov 2023</span>
-                          </div>
+                        <div className="flex flex-wrap gap-2 mb-10">
+                          {['React.js', 'JavaScript', 'Tailwind CSS', 'REST APIs', 'Responsive Design'].map(tech => (
+                              <span key={tech} className="px-3 py-1.5 bg-white/5 text-xs font-semibold text-white/60 rounded-xl border border-white/5">{tech}</span>
+                          ))}
                         </div>
 
-                        {/* Freelance Phase */}
-                        <div className="relative group/phase">
-                          <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-purple-500 group-hover/phase:bg-purple-500 transition-colors z-10 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span className="font-bold text-lg text-white group-hover/phase:text-purple-300 transition-colors">Freelance Frontend Engineer</span>
-                            <span className="px-3 py-1 bg-purple-500/10 text-purple-300/80 rounded-full text-xs font-bold uppercase tracking-wider w-fit">Jul 2024 - Dec 2024</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
+                            <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> Bug Resolution</h4>
+                            <p className="text-white/60 text-sm leading-relaxed">Collaborated with the development team to identify and resolve critical bugs, ensuring a reliable user experience.</p>
                           </div>
-                        </div>
-                      </div>
-                      
-                      <div className="flex flex-wrap gap-2 mb-10">
-                        {['React.js', 'JavaScript', 'Tailwind CSS', 'REST APIs', 'Responsive Design'].map(tech => (
-                            <span key={tech} className="px-3 py-1.5 bg-white/5 text-xs font-semibold text-white/60 rounded-xl border border-white/5">{tech}</span>
-                        ))}
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> Bug Resolution & Reliability</h4>
-                          <p className="text-white/60 text-sm leading-relaxed">Collaborated with the development team to identify, document, and resolve multiple bugs, leading to a smoother and more reliable user experience.</p>
-                        </div>
-                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> UI/UX Optimization</h4>
-                          <p className="text-white/60 text-sm leading-relaxed">Conducted functional and UI/UX testing, providing actionable feedback that enhanced product performance. Improved product usability by identifying and reporting edge cases during testing.</p>
-                        </div>
-                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> Team Collaboration</h4>
-                          <p className="text-white/60 text-sm leading-relaxed">Worked closely with mentors and senior developers to understand workflows, debug issues, and suggest improvements.</p>
+                          <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
+                            <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> UI/UX Optimization</h4>
+                            <p className="text-white/60 text-sm leading-relaxed">Conducted functional testing and provided feedback that improved overall product performance and usability.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -313,18 +315,14 @@ export default function PortfolioScene() {
                   <div className="glass-card flex-1 p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group-hover:-translate-y-2 transition-all duration-500 border border-white/5 group-hover:border-blue-500/30">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[100px] group-hover:bg-blue-500/20 transition-colors duration-700" />
                     
-                    <div className="relative z-10">
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
-                        <div>
-                          <h3 className="text-3xl md:text-4xl font-bold mb-2 text-white">Frontend Engineer</h3>
-                          <div className="flex items-center gap-3">
-                            <p className="text-xl text-blue-400 font-medium">@ Techstuff Private Limited</p>
+                    <div className="relative flex flex-col md:flex-row gap-8">
+                      <div className="md:w-1/3 shrink-0 pt-2">
+                        <div className="sticky top-32">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">Frontend Engineer</h3>
+                          <div className="flex flex-wrap items-center gap-3 mb-6">
+                            <p className="text-lg text-blue-400 font-medium">@ Techstuff Private Limited</p>
                             <span className="px-2 py-0.5 bg-white/10 text-white/50 rounded text-xs font-bold uppercase tracking-wider">Indore</span>
                           </div>
-                        </div>
-                        <div className="flex flex-col items-start sm:items-end gap-1">
-                          <span className="px-4 py-1.5 bg-blue-500/20 text-blue-300 rounded-full text-sm font-bold uppercase tracking-widest border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.2)]">Present</span>
-                          <span className="text-white/40 text-xs font-semibold uppercase tracking-wider mt-1">Started Feb 2025</span>
                         </div>
                       </div>
                       
