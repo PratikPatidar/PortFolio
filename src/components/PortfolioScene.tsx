@@ -413,8 +413,7 @@ export default function PortfolioScene() {
                     {/* RIGHT: Summary, Tech Stack, and Links */}
                     <div className="w-full md:w-[65%] flex flex-col gap-4 h-full">
                       <div className="flex flex-wrap gap-2">
-                        {project.type && <span className="px-3 py-1 bg-white/5 text-[10px] font-bold text-white/70 rounded-full uppercase tracking-wider">{project.type}</span>}
-                        {project.isEnterprise && <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-[10px] font-bold rounded-full uppercase tracking-wider flex items-center gap-1.5"><FaNetworkWired /> Enterprise</span>}
+                        {project.type && <span className="px-3 py-1 bg-white/5 text-[10px] font-bold text-white/70 rounded-full uppercase tracking-wider flex items-center gap-1.5"><FaNetworkWired /> {project.type}</span>}
                       </div>
                       
                       <p className="text-sm text-white/60 leading-relaxed">{project.description}</p>
@@ -433,8 +432,8 @@ export default function PortfolioScene() {
                             Live View <FaArrowUpRightFromSquare size={12} />
                           </a>
                         )}
-                        {project.github && (
-                          <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest px-6 py-3 bg-white/10 text-white rounded-full hover:bg-white/20 active:scale-95 transition-colors">
+                        {project.githubLink !== "#" && (
+                          <a href={project.githubLink} target="_blank" rel="noreferrer" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest px-6 py-3 bg-white/10 text-white rounded-full hover:bg-white/20 active:scale-95 transition-colors">
                             Source <FaGithub size={12} />
                           </a>
                         )}
