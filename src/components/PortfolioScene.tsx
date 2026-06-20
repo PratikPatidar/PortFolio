@@ -150,13 +150,13 @@ export default function PortfolioScene() {
               </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 text-white leading-none">
-                Pratik<br />
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-8 text-white leading-none">
+                Pratik <br className="md:hidden" />
                 <span className="text-white/40">Patidar.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <p className="text-xl md:text-2xl text-white/50 max-w-2xl leading-relaxed mb-12 font-medium">
+              <p className="text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed mb-12 font-medium">
                 I’m a Frontend Engineer who loves building fast, reliable web apps. I care deeply about clean code, strong JavaScript fundamentals, and creating user experiences that actually feel good to use.
               </p>
             </FadeIn>
@@ -188,11 +188,11 @@ export default function PortfolioScene() {
           </section>
 
           {/* About Me Section */}
-          <section id="about" className="scroll-mt-32">
+          <section id="about" className="scroll-mt-32 max-w-4xl">
             <FadeIn>
               <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 01. Beyond the Frameworks</h2>
               <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-                <div className="md:col-span-12 space-y-6 text-xl md:text-2xl text-white/70 font-medium leading-relaxed">
+                <div className="md:col-span-12 space-y-6 text-lg md:text-xl text-white/70 font-medium leading-relaxed">
                   <p>I’m a Frontend Engineer who genuinely cares about how things work under the hood. While it's easy to get caught up in the hype of new frameworks, I've spent my time building production applications by focusing heavily on the fundamentals: memory management, closures, and keeping the DOM lean.</p>
                   <p>My daily toolkit includes Next.js, React, and SvelteKit, but my real job is making sure the user experience doesn't break when an app is flooded with real-time data. I actually enjoy fixing the annoying stuff—whether that’s tracking down a weird layout stutter, cleaning up a messy global state, or figuring out why a page is taking too long to load.</p>
                   <p>To me, great engineering is about making complex things feel simple and predictable. When I'm not writing code, I'm usually reading up on software architecture or experimenting with new ways to make web apps feel native and lightning fast.</p>
@@ -207,15 +207,15 @@ export default function PortfolioScene() {
               <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 02. How I Build</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-8 glass-card rounded-[2rem] group hover:scale-[1.02] transition-transform">
-                  <h3 className="text-2xl font-bold text-white mb-4">Performance First</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Performance First</h3>
                   <p className="text-white/60 leading-relaxed">Users shouldn't have to wait. I focus on keeping the initial load as light as possible using code splitting and lazy loading so the app feels fast on any device.</p>
                 </div>
                 <div className="p-8 glass-card rounded-[2rem] group hover:scale-[1.02] transition-transform">
-                  <h3 className="text-2xl font-bold text-white mb-4">Predictable State</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Predictable State</h3>
                   <p className="text-white/60 leading-relaxed">A UI should never lie to the user. I keep application state clean and strictly controlled using tools like Redux and Svelte Stores so the data displayed is always accurate.</p>
                 </div>
                 <div className="p-8 glass-card rounded-[2rem] group hover:scale-[1.02] transition-transform">
-                  <h3 className="text-2xl font-bold text-white mb-4">Defensive Coding</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Defensive Coding</h3>
                   <p className="text-white/60 leading-relaxed">The network is unpredictable. I build safe API layers using TypeScript and proper error handling to prevent weird glitches and silent crashes when things go wrong.</p>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function PortfolioScene() {
                   <span className="w-8 h-[1px] bg-blue-500"></span>
                   / 03. Experience
                 </h2>
-                <h3 className="text-4xl md:text-5xl font-bold text-white">Where I've Made an <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Impact</span></h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-white">Where I've Made an <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Impact</span></h3>
               </div>
               
               <div className="relative flex flex-col gap-12 md:gap-16">
@@ -249,9 +249,9 @@ export default function PortfolioScene() {
                     
                     <div className="relative z-10">
                       <div className="mb-10">
-                        <h3 className="text-3xl md:text-4xl font-bold mb-2 text-white">Frontend Engineer</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">Frontend Engineer</h3>
                         <div className="flex items-center gap-3">
-                          <p className="text-xl text-purple-400 font-medium">@ Undigicore</p>
+                          <p className="text-lg text-purple-400 font-medium">@ Undigicore</p>
                           <span className="px-2 py-0.5 bg-white/10 text-white/50 rounded text-xs font-bold uppercase tracking-wider">Remote</span>
                         </div>
                       </div>
@@ -316,9 +316,9 @@ export default function PortfolioScene() {
                     <div className="relative z-10">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
                         <div>
-                          <h3 className="text-3xl md:text-4xl font-bold mb-2 text-white">Frontend Engineer</h3>
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">Frontend Engineer</h3>
                           <div className="flex items-center gap-3">
-                            <p className="text-xl text-blue-400 font-medium">@ Techstuff Private Limited</p>
+                            <p className="text-lg text-blue-400 font-medium">@ Techstuff Private Limited</p>
                             <span className="px-2 py-0.5 bg-white/10 text-white/50 rounded text-xs font-bold uppercase tracking-wider">Indore</span>
                           </div>
                         </div>
