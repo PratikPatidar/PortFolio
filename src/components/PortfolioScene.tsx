@@ -139,8 +139,8 @@ export default function PortfolioScene() {
         style={{ scaleX: scrollYProgress }} 
       />
 
-      <div className="relative z-10 w-full px-6">
-        <main className="max-w-5xl mx-auto space-y-48 p-6">
+      <div className="relative z-10 w-full px-4 md:px-6">
+        <main className="max-w-5xl mx-auto space-y-24 md:space-y-48 py-8 md:py-12">
           
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col justify-center relative pt-20">
@@ -162,14 +162,14 @@ export default function PortfolioScene() {
             </FadeIn>
             
             <FadeIn delay={0.3}>
-              <div className="flex flex-wrap gap-4 items-center">
-                <a href="#contact" className="group relative inline-flex items-center justify-center gap-3 px-6 py-3 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all text-xs whitespace-nowrap shrink-0">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center w-full">
+                <a href="#contact" className="group relative inline-flex items-center justify-center gap-3 px-6 py-4 sm:py-3 bg-white text-black font-bold rounded-full hover:scale-105 active:scale-95 transition-all text-xs whitespace-nowrap shrink-0 w-full sm:w-auto">
                   <FaPaperPlane className="text-blue-500 group-hover:rotate-12 transition-transform" /> Let's Talk
                 </a>
-                <button onClick={() => setIsResumeOpen(true)} className="group relative inline-flex items-center justify-center gap-3 px-6 py-3 glass-card font-bold rounded-full hover:bg-white/10 hover:scale-105 active:scale-95 transition-all text-xs shrink-0">
+                <button onClick={() => setIsResumeOpen(true)} className="group relative inline-flex items-center justify-center gap-3 px-6 py-4 sm:py-3 glass-card font-bold rounded-full hover:bg-white/10 hover:scale-105 active:scale-95 transition-all text-xs shrink-0 w-full sm:w-auto">
                   <span className="text-white/70 group-hover:text-white transition-colors">Resume</span>
                 </button>
-                <div className="flex gap-3 sm:gap-4 shrink-0">
+                <div className="flex gap-3 sm:gap-4 shrink-0 justify-center w-full sm:w-auto mt-2 sm:mt-0">
                   <a href="https://linkedin.com/in/pratik-patidar" target="_blank" rel="noreferrer" className="p-4 sm:p-5 glass-card rounded-full hover:bg-white/10 hover:scale-110 active:scale-95 transition-all flex items-center justify-center text-white/70 hover:text-white">
                     <FaLinkedin size={20} />
                   </a>
@@ -246,7 +246,7 @@ export default function PortfolioScene() {
                     <div className="w-4 h-4 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.8)] group-hover:scale-150 transition-all duration-500 ring-4 ring-[#0c0c0e]" />
                   </div>
                   
-                  <div className="glass-card flex-1 p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group-hover:-translate-y-2 transition-all duration-500 border border-white/5 group-hover:border-purple-500/30">
+                  <div className="glass-card flex-1 p-6 md:p-12 rounded-[2.5rem] relative overflow-hidden group-hover:-translate-y-2 transition-all duration-500 border border-white/5 group-hover:border-purple-500/30">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 blur-[100px] group-hover:bg-purple-500/20 transition-colors duration-700" />
                     
                     <div className="relative z-10">
@@ -312,7 +312,7 @@ export default function PortfolioScene() {
                     <div className="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.8)] group-hover:scale-150 transition-all duration-500 ring-4 ring-[#0c0c0e]" />
                   </div>
                   
-                  <div className="glass-card flex-1 p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group-hover:-translate-y-2 transition-all duration-500 border border-white/5 group-hover:border-blue-500/30">
+                  <div className="glass-card flex-1 p-6 md:p-12 rounded-[2.5rem] relative overflow-hidden group-hover:-translate-y-2 transition-all duration-500 border border-white/5 group-hover:border-blue-500/30">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[100px] group-hover:bg-blue-500/20 transition-colors duration-700" />
                     
                     <div className="relative z-10">
@@ -452,7 +452,7 @@ export default function PortfolioScene() {
               <h2 className="text-xs font-bold tracking-[0.3em] text-blue-500 uppercase mb-12">/ 05. The Tech Arsenal</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {skillCategories.map((cat, i) => (
-                  <div key={cat.title} className="p-8 glass-card rounded-[2rem] group">
+                  <div key={cat.title} className="p-6 md:p-8 glass-card rounded-2xl md:rounded-[2rem] group">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="text-2xl">{cat.icon}</div>
                       <h3 className="text-lg font-bold text-white">{cat.title}</h3>
@@ -473,7 +473,7 @@ export default function PortfolioScene() {
           {/* Contact Section */}
           <section id="contact" className="py-20">
             <FadeIn>
-              <div className="glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+              <div className="glass-card rounded-3xl md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 blur-[120px] rounded-full" />
                 <div className="relative z-10">
                   <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tighter">Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Together</span></h2>
@@ -510,8 +510,8 @@ export default function PortfolioScene() {
 
           {/* Footer */}
           <footer className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-white/30 text-[10px] font-bold tracking-[0.2em] uppercase">
-             <p>© 2026 PRATIK PATIDAR</p>
-             <div className="flex items-center gap-8">
+             <p className="text-center md:text-left">© 2026 PRATIK PATIDAR</p>
+             <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8">
                 <a href="https://github.com/PratikPatidar/PortFolio" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-2 text-white/50"><FaGithub size={14} className="inline-block" /> View Source</a>
                 <span className="hover:text-blue-500 transition-colors cursor-default">Next.js 16</span>
                 <span className="hover:text-blue-500 transition-colors cursor-default">Framer Motion</span>

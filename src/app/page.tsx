@@ -28,7 +28,7 @@ export default function Home() {
       
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#0c0c0e]/80 backdrop-blur-2xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
-        <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
           <span className="font-bold tracking-[0.3em] text-xs text-white">PRATIK PATIDAR</span>
           <div className="hidden md:flex gap-8 text-[10px] font-bold tracking-widest uppercase text-white/50">
             <a href="#about" className="hover:text-white transition-colors">About</a>

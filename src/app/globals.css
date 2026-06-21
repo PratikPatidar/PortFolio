@@ -43,9 +43,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Glassmorphism */
 .glass-card {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
