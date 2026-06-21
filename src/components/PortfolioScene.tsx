@@ -12,10 +12,10 @@ const Background3D = dynamic(() => import('@/components/Background3D'), { ssr: f
 // --- Reusable Animation Wrapper ---
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
-    initial={{ opacity: 0, y: 40 }}
+    initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 1, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+    viewport={{ once: true, margin: "50px" }}
+    transition={{ duration: 0.5, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
     className={className}
   >
     {children}
@@ -41,13 +41,13 @@ const projects = [
     tags: ["React", "Redux", "JWT", "Node.js"],
   },
   {
-    title: "Resilient UI (E-Commerce)",
-    type: "Enterprise Project",
-    description: "An e-commerce prototype built to test how well a React UI handles slow networks and API errors.\n\nUsed AbortControllers to cancel old requests if a user clicks too fast, and used Redux Toolkit to make sure the shopping cart total is always 100% accurate.",
-    image: "/images/ecomzy.png",
-    liveLink: "#",
-    githubLink: "#",
-    tags: ["React", "Redux Toolkit", "Tailwind", "REST APIs"],
+    title: "Trip Now",
+    type: "Web Application",
+    description: "A modern travel and booking platform built to provide seamless user experiences. Features include responsive design, engaging UI, and smooth navigation for trip planning.\n\nOptimized for performance and built with modern frontend tools to ensure a fast and reliable user journey.",
+    image: "/images/tripnow.png",
+    liveLink: "https://tripnow-gray.vercel.app/",
+    githubLink: "https://github.com/PratikPatidar/TripNow.git",
+    tags: ["React", "Tailwind CSS", "Vite", "REST APIs"],
   }
 ];
 
@@ -511,7 +511,8 @@ export default function PortfolioScene() {
           {/* Footer */}
           <footer className="py-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-white/30 text-[10px] font-bold tracking-[0.2em] uppercase">
              <p>© 2026 PRATIK PATIDAR</p>
-             <div className="flex gap-8">
+             <div className="flex items-center gap-8">
+                <a href="https://github.com/PratikPatidar/PortFolio" target="_blank" rel="noreferrer" className="hover:text-white transition-colors flex items-center gap-2 text-white/50"><FaGithub size={14} className="inline-block" /> View Source</a>
                 <span className="hover:text-blue-500 transition-colors cursor-default">Next.js 16</span>
                 <span className="hover:text-blue-500 transition-colors cursor-default">Framer Motion</span>
                 <span className="hover:text-blue-500 transition-colors cursor-default">Tailwind CSS</span>

@@ -3,6 +3,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import ChatWidget from '@/components/ChatWidget';
+import { FaGithub } from "react-icons/fa6";
 
 // Dynamically import the entire scene to ensure it only runs on the client.
 // We are using a stable 2D Framer Motion architecture.

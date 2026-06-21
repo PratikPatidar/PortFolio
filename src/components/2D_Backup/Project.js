@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import eLearning from "./images/elearning.png";
-import ecomzy from "./images/ecomzy.png";
+
 import Page from "./images/page.png";
 
 const projects = [
@@ -15,13 +15,13 @@ const projects = [
     tags: ["MERN", "JWT", "JavaScript", "Vercel", "bcryptjs", "Tailwind CSS", "Render"],
   },
   {
-    title: "Ecomzy",
+    title: "Trip Now",
     description:
-      "E-Commerce app for buying & selling products with authentication, cart, and payment integration.",
-    image: ecomzy,
-    liveLink: "",
-    githubLink: "https://github.com/PratikPatidar",
-    tags: ["Node.js", "MongoDB", "Framer Motion", "Material-UI", "Tailwind CSS", "React", "shadcn/ui"],
+      "A modern travel and booking platform built to provide seamless user experiences with responsive design and smooth navigation.",
+    image: "/images/tripnow.png",
+    liveLink: "https://tripnow-gray.vercel.app/",
+    githubLink: "https://github.com/PratikPatidar/TripNow.git",
+    tags: ["React", "Vite", "Framer Motion", "Tailwind CSS"],
   },
   {
     title: "Modern SaaS Landing Page",
