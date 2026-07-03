@@ -22,14 +22,11 @@ logs
 Thumbs.db
 
 # Env files
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
 # Editor/IDE files
-.vscode/
 .idea/
 *.swp
 
@@ -42,3 +39,4 @@ coverage/
 *.tgz
 *.zip
 *.tar
+config.bat
