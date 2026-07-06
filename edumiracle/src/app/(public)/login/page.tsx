@@ -29,6 +29,13 @@ export default function LoginPage() {
       }
 
       if (data.role === 'admin' || data.role === 'educator') {
+      toast.success('Welcome Admin! Redirecting...');
+      setTimeout(() => {
+        // In production the admin sub‑domain will be used automatically.
+        // For local/dev we simply navigate to the admin route on the same host.
+        window.location.href = '/admin';
+      }, 800);
+    }
         toast.success('Welcome Admin! Redirecting...');
         setTimeout(() => {
           if (window.location.hostname.includes('admin')) {

@@ -88,7 +88,7 @@ export async function proxy(request: NextRequest) {
       ? hostname.replace(`.edumiracle.in`, '')
       : hostname.split('.')[0]; // simple way to grab subdomain 'admin' from admin.localhost:3001
 
-  const isAdminSubdomain = currentHost === 'admin';
+  const isAdminSubdomain = process.env.NODE_ENV === 'production' && currentHost === 'admin';
 
   const token = request.cookies.get('auth_token')?.value;
   const isAuthRoute = url.pathname.startsWith('/login');
