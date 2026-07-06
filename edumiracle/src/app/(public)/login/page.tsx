@@ -6,8 +6,8 @@ import { toast, Toaster } from 'react-hot-toast';
 import { Eye, EyeOff } from 'lucide-react';
 
 export default function LoginPage() {
-  const [emailOrId, setEmailOrId] = useState('');
-  const [password, setPassword] = useState('');
+  const [emailOrId, setEmailOrId] = useState('STU2026001');
+  const [password, setPassword] = useState('Student@123');
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -113,6 +113,15 @@ export default function LoginPage() {
           >
             {loading ? 'Authenticating...' : 'Sign In'}
           </button>
+
+          <div className="mt-4 p-3 bg-orange-50 border border-orange-100 rounded-xl text-center">
+            <p className="text-xs text-orange-800 font-semibold">
+              Demo Student Credentials (Autofilled):
+            </p>
+            <p className="text-xs text-orange-700 mt-1">
+              ID: <span className="font-bold select-all">STU2026001</span> &nbsp;|&nbsp; Password: <span className="font-bold select-all">Student@123</span>
+            </p>
+          </div>
         </form>
 
         <div className="mt-8 pt-8 border-t border-slate-100 text-center">
