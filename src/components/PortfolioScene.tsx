@@ -399,7 +399,7 @@ export default function PortfolioScene() {
           {/* Contact Section */}
           <section id="contact" className="py-20">
             <FadeIn>
-              <div className="glass-card rounded-3xl md:rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden">
+              <div className="glass-card max-w-4xl mx-auto rounded-3xl md:rounded-[3rem] p-8 md:p-16 text-center relative overflow-hidden">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/20 blur-[120px] rounded-full" />
                 <div className="relative z-10">
                   <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tighter">Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Together</span></h2>
