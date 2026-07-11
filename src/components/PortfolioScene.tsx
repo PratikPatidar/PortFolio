@@ -24,6 +24,15 @@ const FadeIn = ({ children, delay = 0, className = "" }: { children: React.React
 
 const projects = [
   {
+    title: "EduMiracle — Student Portal",
+    type: "Freelance Client Project",
+    description: "Designed and developed a complete Student ERP Portal for a NEET/JEE coaching institute client. Delivered a personalized dashboard featuring live attendance tracking, comprehensive mock test analytics, a CBT simulation environment, and a fee ledger.\n\nIntegrated Google Gemini AI for doubt resolution and implemented a secure admin panel. Built from scratch to production with Next.js 16, MongoDB, and Recharts, focusing on performance, scalability, and premium UX.",
+    image: "/images/edumiracle.png",
+    liveLink: "https://edumiracle.vercel.app/",
+    githubLink: "https://github.com/PratikPatidar/edu_tech",
+    tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "Recharts", "Gemini AI"],
+  },
+  {
     title: "Recruitment Scheduling Dashboard",
     type: "Enterprise Project",
     description: "Built a scheduling grid that handles large amounts of data. Added virtualization so users can scroll smoothly without lag.\n\nUsed TypeScript extensively to catch bugs early before they reach production.\n\nHandled complex user interactions carefully so that live status updates don't cause the screen to flicker or layout to jump.",
@@ -34,20 +43,12 @@ const projects = [
   },
   {
     title: "Authentication & State (E-Learning)",
+    type: "Web Application",
     description: "A full-stack app focused on building a secure JWT authentication flow and protecting private routes.\n\nUsed Redux to keep the login state stable across the app and implemented proper token handling to keep user sessions secure from cross-site attacks.",
     image: "/images/elearning.png",
     liveLink: "https://e-learning-app-sand.vercel.app/",
     githubLink: "https://github.com/PratikPatidar/eLearning/",
     tags: ["React", "Redux", "JWT", "Node.js"],
-  },
-  {
-    title: "EduMiracle — Student Portal",
-    type: "Freelance Client Project",
-    description: "Designed and developed a complete Student ERP Portal for a NEET/JEE coaching institute client. Delivered a personalized dashboard featuring live attendance tracking, comprehensive mock test analytics, a CBT simulation environment, and a fee ledger.\n\nIntegrated Google Gemini AI for doubt resolution and implemented a secure admin panel. Built from scratch to production with Next.js 16, MongoDB, and Recharts, focusing on performance, scalability, and premium UX.",
-    image: "/images/edumiracle.png",
-    liveLink: "https://edumiracle.vercel.app/",
-    githubLink: "https://github.com/PratikPatidar/edu_tech",
-    tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "Recharts", "Gemini AI"],
   }
 ];
 
