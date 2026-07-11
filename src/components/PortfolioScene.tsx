@@ -529,8 +529,9 @@ export default function PortfolioScene() {
             <h2 className="text-base md:text-lg font-bold text-white tracking-widest uppercase">Pratik Patidar <span className="text-blue-500 opacity-60 hidden sm:inline">- Resume</span></h2>
             <div className="flex items-center gap-4 md:gap-6">
               <a 
-                href="/resume.pdf" 
-                download="Pratik_Patidar_Resume.pdf"
+                href="https://drive.google.com/file/d/1UzL0tLgGQZpCKgsE1JbqulZLsHdKXLzg/view?usp=drivesdk" 
+                target="_blank"
+                rel="noreferrer"
                 className="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-full transition-colors flex items-center gap-2 tracking-wider"
               >
                 <FaArrowDown size={14} />
