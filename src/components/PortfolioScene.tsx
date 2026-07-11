@@ -42,8 +42,8 @@ const projects = [
   },
   {
     title: "EduMiracle — Student Portal",
-    type: "Full-Stack ERP",
-    description: "A complete Student ERP Portal for NEET/JEE coaching institutes. Features a personalized dashboard with attendance tracking, mock test analytics, CBT environment, fee ledger, AI-powered doubt resolution (Gemini), and an admin panel.\n\nBuilt with Next.js 16 App Router, MongoDB, JWT auth, and Recharts. Deployed on Vercel with role-based access control for students and admins.",
+    type: "Freelance Client Project",
+    description: "Designed and developed a complete Student ERP Portal for a NEET/JEE coaching institute client. Delivered a personalized dashboard featuring live attendance tracking, comprehensive mock test analytics, a CBT simulation environment, and a fee ledger.\n\nIntegrated Google Gemini AI for doubt resolution and implemented a secure admin panel. Built from scratch to production with Next.js 16, MongoDB, and Recharts, focusing on performance, scalability, and premium UX.",
     image: "/images/edumiracle.png",
     liveLink: "https://edumiracle.vercel.app/",
     githubLink: "https://github.com/PratikPatidar/edu_tech",
