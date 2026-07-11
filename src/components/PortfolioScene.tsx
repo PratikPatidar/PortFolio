@@ -41,13 +41,13 @@ const projects = [
     tags: ["React", "Redux", "JWT", "Node.js"],
   },
   {
-    title: "Trip Now",
-    type: "Web Application",
-    description: "A modern travel and booking platform built to provide seamless user experiences. Features include responsive design, engaging UI, and smooth navigation for trip planning.\n\nOptimized for performance and built with modern frontend tools to ensure a fast and reliable user journey.",
-    image: "/images/tripnow.png",
-    liveLink: "https://tripnow-gray.vercel.app/",
-    githubLink: "https://github.com/PratikPatidar/TripNow.git",
-    tags: ["React", "Tailwind CSS", "Vite", "REST APIs"],
+    title: "EduMiracle — Student Portal",
+    type: "Full-Stack ERP",
+    description: "A complete Student ERP Portal for NEET/JEE coaching institutes. Features a personalized dashboard with attendance tracking, mock test analytics, CBT environment, fee ledger, AI-powered doubt resolution (Gemini), and an admin panel.\n\nBuilt with Next.js 16 App Router, MongoDB, JWT auth, and Recharts. Deployed on Vercel with role-based access control for students and admins.",
+    image: "/images/edumiracle.png",
+    liveLink: "https://edumiracle.vercel.app/",
+    githubLink: "https://github.com/PratikPatidar/edu_tech",
+    tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS", "Recharts", "Gemini AI"],
   }
 ];
 
