@@ -240,71 +240,6 @@ export default function PortfolioScene() {
                 {/* Global Timeline Line (Desktop only) */}
                 <div className="absolute left-[1.15rem] top-12 bottom-12 w-[2px] bg-gradient-to-b from-purple-500 via-blue-500 to-transparent hidden md:block opacity-30"></div>
 
-                {/* Undigicore Combined Experience */}
-                <div className="relative flex flex-col md:flex-row gap-6 md:gap-10 items-start group">
-                  {/* Timeline Dot */}
-                  <div className="hidden md:flex mt-12 z-10 w-10 justify-center flex-shrink-0">
-                    <div className="w-4 h-4 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.8)] group-hover:scale-150 transition-all duration-500 ring-4 ring-[#0c0c0e]" />
-                  </div>
-                  
-                  <div className="glass-card flex-1 p-6 md:p-12 rounded-[2.5rem] relative overflow-hidden group-hover:-translate-y-2 transition-all duration-500 border border-white/5 group-hover:border-purple-500/30">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 blur-[100px] group-hover:bg-purple-500/20 transition-colors duration-700" />
-                    
-                    <div className="relative z-10">
-                      <div className="mb-10">
-                        <h3 className="text-lg md:text-xl font-bold mb-2 text-white">Frontend Engineer</h3>
-                        <div className="flex items-center gap-3">
-                          <p className="text-sm text-purple-400 font-medium">@ Undigicore</p>
-                          <span className="px-2 py-0.5 bg-white/10 text-white/50 rounded text-[10px] font-bold uppercase tracking-wider">Remote</span>
-                        </div>
-                      </div>
-                      
-                      {/* Timeline Progression Container */}
-                      <div className="relative pl-6 mb-12">
-                        <div className="absolute left-0 top-3 bottom-3 w-px bg-white/20"></div>
-                        
-                        {/* Intern Phase */}
-                        <div className="relative mb-8 group/phase">
-                          <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-white/40 group-hover/phase:border-purple-400 transition-colors z-10"></div>
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span className="font-bold text-base text-white group-hover/phase:text-purple-300 transition-colors">Frontend Engineering Intern</span>
-                            <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs font-bold uppercase tracking-wider w-fit">Aug 2023 - Nov 2023</span>
-                          </div>
-                        </div>
-
-                        {/* Freelance Phase */}
-                        <div className="relative group/phase">
-                          <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-purple-500 group-hover/phase:bg-purple-500 transition-colors z-10 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span className="font-bold text-base text-white group-hover/phase:text-purple-300 transition-colors">Freelance Frontend Engineer</span>
-                            <span className="px-3 py-1 bg-purple-500/10 text-purple-300/80 rounded-full text-xs font-bold uppercase tracking-wider w-fit">Jul 2024 - Dec 2024</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="flex flex-wrap gap-2 mb-10">
-                        {['React.js', 'JavaScript', 'Tailwind CSS', 'REST APIs', 'Responsive Design'].map(tech => (
-                            <span key={tech} className="px-3 py-1.5 bg-white/5 text-xs font-semibold text-white/60 rounded-xl border border-white/5">{tech}</span>
-                        ))}
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> Bug Resolution & Reliability</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Collaborated with the development team to identify, document, and resolve multiple bugs, leading to a smoother and more reliable user experience.</p>
-                        </div>
-                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> UI/UX Optimization</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Conducted functional and UI/UX testing, providing actionable feedback that enhanced product performance. Improved product usability by identifying and reporting edge cases during testing.</p>
-                        </div>
-                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-purple-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-purple-500">✦</span> Team Collaboration</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Worked closely with mentors and senior developers to understand workflows, debug issues, and suggest improvements.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
                 {/* Techstuff Experience */}
                 <div className="relative flex flex-col md:flex-row gap-6 md:gap-10 items-start group">
@@ -335,55 +270,45 @@ export default function PortfolioScene() {
                       <div className="relative pl-6 mb-12">
                         <div className="absolute left-0 top-3 bottom-3 w-px bg-white/20"></div>
                         
-                        {/* Intern Phase */}
-                        <div className="relative mb-8 group/phase">
-                          <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-white/40 group-hover/phase:border-blue-400 transition-colors z-10"></div>
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span className="font-bold text-base text-white group-hover/phase:text-blue-300 transition-colors">Frontend Engineering Intern</span>
-                            <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs font-bold uppercase tracking-wider w-fit">Feb 2025 - Jul 2025</span>
-                          </div>
-                        </div>
-
-                        {/* Full-Time Phase */}
                         <div className="relative group/phase">
                           <div className="absolute -left-[29px] top-2.5 w-3 h-3 rounded-full bg-[#0c0c0e] border-2 border-blue-500 group-hover/phase:bg-blue-500 transition-colors z-10 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
                           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <span className="font-bold text-base text-white group-hover/phase:text-blue-300 transition-colors">Full-Time Frontend Engineer</span>
-                            <span className="px-3 py-1 bg-blue-500/10 text-blue-300/80 rounded-full text-xs font-bold uppercase tracking-wider w-fit">Aug 2025 - Present</span>
+                            <span className="font-bold text-base text-white group-hover/phase:text-blue-300 transition-colors">Frontend Engineer</span>
+                            <span className="px-3 py-1 bg-blue-500/10 text-blue-300/80 rounded-full text-xs font-bold uppercase tracking-wider w-fit">Feb 2025 - Present</span>
                           </div>
                         </div>
                       </div>
                       
                       <div className="flex flex-wrap gap-2 mb-10">
-                        {['Next.js', 'SvelteKit', 'TypeScript', 'Tailwind CSS'].map(tech => (
+                        {['React.js', 'Next.js', 'SvelteKit', 'TypeScript', 'Tailwind CSS'].map(tech => (
                             <span key={tech} className="px-3 py-1.5 bg-white/5 text-xs font-semibold text-white/60 rounded-xl border border-white/5">{tech}</span>
                         ))}
                       </div>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> Rendering Optimization</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Debugged and resolved layout stutters in data-dense tables by auditing component lifecycles and eliminating unnecessary re-paints. Shifted heavy computations out of the main thread to keep UI interactions responsive under load.</p>
-                        </div>
-                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> State Architecture</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Replaced loose state patterns with atomic transactions using Svelte Stores. This eliminated race conditions during rapid data stream updates and ensured the UI state always mirrors the source of truth.</p>
+                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> Component Architecture</h4>
+                          <p className="text-white/60 text-xs leading-relaxed">Built 20+ reusable UI components and form-based interfaces using SvelteKit, TypeScript, and Tailwind CSS so the team could reuse them across different parts of the app instead of rebuilding similar UI each time.</p>
                         </div>
                         <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 transition-all">
                           <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> Performance Engineering</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Reduced Time-to-Interactive (TTI) by 35% through aggressive code-splitting at route boundaries. Optimized asset delivery via Vite to minimize payload size for low-bandwidth connections.</p>
+                          <p className="text-white/60 text-xs leading-relaxed">Improved application performance using lazy loading, code splitting, and dynamic imports to reduce the initial JavaScript bundle size and improve page load times.</p>
                         </div>
                         <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> Component Modularity</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Built a library of reusable, semantic UI components. Focused on CSS containment and DOM simplicity to ensure visual stability even as dashboard complexity scales.</p>
+                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> API & Authentication</h4>
+                          <p className="text-white/60 text-xs leading-relaxed">Integrated REST APIs and set up JWT authentication to handle user login, session management, and secure data exchange. Worked with backend developers connecting APIs to ensure data was handled correctly.</p>
                         </div>
                         <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 transition-all">
-                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> API Integration</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Implemented custom WebSocket handlers to manage real-time status updates, ensuring efficient event delegation and graceful degradation when API latency spikes.</p>
+                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> State Management</h4>
+                          <p className="text-white/60 text-xs leading-relaxed">Fixed state management bugs and cleaned up components that were re-rendering more than needed, which made the app feel much more responsive.</p>
+                        </div>
+                        <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 transition-all">
+                          <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> AI-Driven Development</h4>
+                          <p className="text-white/60 text-xs leading-relaxed">Leveraged AI tools like Claude Code, Gemini CLI, Cursor, and Windsurf for debugging, refactoring, and rapidly implementing features — always reviewing and testing the output before merging.</p>
                         </div>
                         <div className="space-y-3 p-6 bg-white/5 border border-white/5 rounded-2xl hover:bg-white/10 hover:border-blue-500/30 transition-all">
                           <h4 className="text-white font-bold flex items-center gap-2"><span className="text-blue-500">✦</span> Agile & Workflows</h4>
-                          <p className="text-white/60 text-xs leading-relaxed">Collaborated with Senior Engineers on Agile Sprint Planning and technical feature scoping. Managed daily Merge Request (MR) code reviews, enforcing strict Git branching workflows and maintaining high code quality.</p>
+                          <p className="text-white/60 text-xs leading-relaxed">Took part in code reviews, worked with the QA team to catch UI issues, and delivered 8+ production features through Agile sprints using GitLab CI/CD and Jira.</p>
                         </div>
                       </div>
                     </div>
