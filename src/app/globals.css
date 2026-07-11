@@ -107,3 +107,8 @@ body {
   -webkit-user-select: auto;
   user-select: auto;
 }
+
+/* Ensure all buttons and links have a pointer cursor */
+button, a, input[type="submit"], [role="button"] {
+  cursor: pointer !important;
+}
